@@ -1,0 +1,27 @@
+{
+  "name": "quizgame-charlaniel-brisluja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build-prod": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staten-island-tech/quizgame-charlaniel-brisluja.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staten-island-tech/quizgame-charlaniel-brisluja/issues"
+  },
+  "homepage": "https://github.com/staten-island-tech/quizgame-charlaniel-brisluja#readme"
+}
