@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "parcel": "^2.0.0-beta.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2",
     "sass": "^1.32.8"
   },
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "build-prod": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html"
   },
   "repository": {
     "type": "git",
