@@ -6,56 +6,70 @@ body * {
   box-sizing: border-box;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to right bottom, #0071ff, #0097ff, #00b5ff, #00cffe, #00e5ef, #31efe1, #5df8cf, #87ffba, #aaffae, #c8ffa5, #e4ffa0, #fdffa0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #0071ff,
+    #0097ff,
+    #00b5ff,
+    #00cffe,
+    #00e5ef,
+    #31efe1,
+    #5df8cf,
+    #87ffba,
+    #aaffae,
+    #c8ffa5,
+    #e4ffa0,
+    #fdffa0
+  );
 }
 .container {
-    min-height: 75%;
-    width: 60%;
-    border-radius: 2rem;
-    overflow: hidden;
-    box-shadow: 0 1rem 3rem rgba(204, 106, 54, .7);
-    position: relative;
+  min-height: 75%;
+  width: 60%;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(204, 106, 54, 0.7);
+  position: relative;
 }
-.bgImage {
-    height: 100%;
-    width: 100%;
-    position: absolute;
+.bg-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
-h1, button {
-    font-family: 'Underdog', cursive;
-    font-weight: 900;
-    letter-spacing: .1rem;
+h1,
+button {
+  font-family: "Underdog", cursive;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
 }
 h1 {
-    margin: 10rem;
-    font-size: 3.5rem;
-    text-align: left;
-    position: absolute;
+  margin: 10rem;
+  font-size: 3.5rem;
+  text-align: left;
+  position: absolute;
 }
-.buttonBox {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr; //creates 2 equal columns  
-    //padding: 10rem;
-    gap: 1rem;
-    bottom: 7rem;
-    width: 80%;
-    margin-left: 10%;
+.button-box {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr; //creates 2 equal columns
+  gap: 1rem;
+  bottom: 7rem;
+  width: 80%;
+  margin-left: 10%;
 }
 button {
-    top: 60%;
-    border-radius: 3rem;
-    border: .5rem solid #F6F285;
-    background-color: #0069EE;
-    font-size: 3rem;
-    color: #fff;
-    transition: .2s all;
-    padding: 2rem 0;
+  top: 60%;
+  border-radius: 3rem;
+  border: 0.5rem solid #f6f285;
+  background-color: #0069ee;
+  font-size: 3rem;
+  color: #fff;
+  transition: 0.2s all;
+  padding: 2rem 0;
 }
 button:hover {
-    box-shadow: 0 1rem 3rem #F6F285;
-    transform: translateY(-.5rem);
+  box-shadow: 0 1rem 3rem #f6f285;
+  transform: translateY(-0.5rem);
 }
