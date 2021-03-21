@@ -35,18 +35,25 @@ h1 {
     text-align: left;
     position: absolute;
 }
-button {
-    width: 42%;
-    min-height: 20%;
+.buttonBox {
     position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr; //creates 2 equal columns  
+    //padding: 10rem;
+    gap: 1rem;
+    bottom: 7rem;
+    width: 80%;
+    margin-left: 10%;
+}
+button {
     top: 60%;
-    left: 29%;
     border-radius: 3rem;
     border: .5rem solid #F6F285;
     background-color: #0069EE;
     font-size: 3rem;
     color: #fff;
     transition: .2s all;
+    padding: 2rem 0;
 }
 button:hover {
     box-shadow: 0 1rem 3rem #F6F285;
