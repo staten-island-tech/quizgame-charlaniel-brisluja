@@ -29,30 +29,37 @@ body {
 }
 
 h1, button {
-  margin: 7rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Underdog", cursive;
   font-weight: 900;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1rem;
 }
 
 h1 {
-  font-size: 3rem;
+  margin: 10rem;
+  font-size: 3.5rem;
   text-align: left;
   position: absolute;
 }
 
-button {
-  width: 42%;
-  min-height: 20%;
+.buttonBox {
   position: absolute;
-  top: 40%;
-  left: 21%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  bottom: 7rem;
+  width: 80%;
+  margin-left: 10%;
+}
+
+button {
+  top: 60%;
   border-radius: 3rem;
   border: 0.5rem solid #F6F285;
   background-color: #0069EE;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #fff;
   transition: 0.2s all;
+  padding: 2rem 0;
 }
 
 button:hover {
