@@ -1,6 +1,6 @@
 DOMSelectors = {
   displayContainer: document.querySelector(".container"),
-};
+}; 
 //I have to go back and replace all the quotation marks with backtics for the questions that have dialogue
 //this is actually so tedious
 //there are six events and five questions because I counted the door as an event in the code and not on the doc
@@ -9,6 +9,7 @@ There are four positive choices and two negatives for the dragon interaction.
 IF THE PERSON GOT TWO OUT OF FOUR OF THE POSITIVES, THEY HAVE THE OPPORTUNITY TO BEFRIEND THE DRAGON. IF THE PERSON HAS TWO OF TWO NEGATIVES, THEY MUST FIGHT THE DRAGON.
 POSITIVES = GOT FEMUR BONE FROM CHEST, BEFRIENDED CHESTER, GIVE COIN (it is possible to get two of four if and only if one of the conditions in the chest room is met)
 NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
+
 
 const quizGame = [
 {
@@ -236,7 +237,7 @@ const endings = [
 The player will have another option next to Play again? Called ‘use key’. 
 USE KEY:
 This takes them to a screen with pictures of both of our dogs on it :)) Kacey and JoJo :)) */
-console.log(DOMSelectors.displayContainer);
+
 const start = function() {
 quizGame.forEach((event) =>
 DOMSelectors.displayContainer.insertAdjacentHTML("beforeend", 
@@ -252,6 +253,6 @@ DOMSelectors.displayContainer.insertAdjacentHTML("beforeend",
 <a class="next">Onwards!</a>
 </div>`)
 );
-};
+}
 
 start();

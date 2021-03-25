@@ -88,10 +88,11 @@ h1 {
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: center;
-  align-items: center; //fix this when you have the time (or just dont? cuz it doesnt really matter at all?? lol???)
+  align-items: center; 
   margin-top: 3rem;
   margin-left: 35%;
   margin-right: 35%;
+  transition: 0.2s all;
 }
 .next:hover,
 .next:focus {
