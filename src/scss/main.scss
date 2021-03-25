@@ -42,12 +42,13 @@ body {
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 1rem 3rem var(--red-color);
-  background-image: url(/src/img/parchment.jpg);
+  background-image: url(/src/img/parchment.jpg); //this isn't working??
   background-size: 100% 100%;
   padding: 5rem;
 }
-h1, .next, button 
-{
+h1,
+.next,
+button {
   font-family: var(--main-font);
   letter-spacing: 0.1rem;
 }
@@ -55,28 +56,28 @@ h1 {
   font-size: 2.5rem;
   text-align: left;
 }
- .button-box {
-   display: grid;
-   grid-template-columns: 1fr 1fr; //two equal columns
-   gap: 1.5rem;
-   bottom: 7rem;
-   width: 100%;
-   height: 30%;
-   margin-top: 6rem;
- }
- button {
-   top: 60%;
-   border-radius: 3rem;
-   border: 0.5rem solid #f6f285;
-   background-color: #0069ee;
-   font-size: 2.25rem;
-   color: #fff;
-   transition: 0.2s all;
- }
- button:hover {
-   box-shadow: 0 1rem 3rem #f6f285;
-   transform: translateY(-0.5rem);
- }
+.button-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr; //two equal columns
+  gap: 1.5rem;
+  bottom: 7rem;
+  width: 100%;
+  height: 30%;
+  margin-top: 6rem;
+}
+button {
+  top: 60%;
+  border-radius: 3rem;
+  border: 0.5rem solid #f6f285;
+  background-color: #0069ee;
+  font-size: 2.25rem;
+  color: #fff;
+  transition: 0.2s all;
+}
+button:hover {
+  box-shadow: 0 1rem 3rem #f6f285;
+  transform: translateY(-0.5rem);
+}
 .next {
   font-size: 2.25rem;
   background-color: var(--pink-color);
@@ -88,7 +89,7 @@ h1 {
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin-top: 3rem;
   margin-left: 35%;
   margin-right: 35%;
@@ -100,7 +101,7 @@ h1 {
   color: var(--pink-color);
   border: 0.4rem solid var(--pink-color);
 }
- /*
+/*
 form label span {
   display: block;
   //box-sizing: border-box;
