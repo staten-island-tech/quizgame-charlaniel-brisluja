@@ -1,6 +1,6 @@
-DOMSelectors = {
-  displayContainer: document.querySelector(".container"),
-}; 
+ DOMSelectors = {
+   displayContainer: document.querySelector(".container"),
+ }; 
 //I have to go back and replace all the quotation marks with backtics for the questions that have dialogue
 //this is actually so tedious
 //there are six events and five questions because I counted the door as an event in the code and not on the doc
@@ -10,8 +10,7 @@ IF THE PERSON GOT TWO OUT OF FOUR OF THE POSITIVES, THEY HAVE THE OPPORTUNITY TO
 POSITIVES = GOT FEMUR BONE FROM CHEST, BEFRIENDED CHESTER, GIVE COIN (it is possible to get two of four if and only if one of the conditions in the chest room is met)
 NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
 
-
-const quizGame = [
+const quizGame = 
 {
   startScreen: {
     question: `You wake up in a dark cave, submerged in crystalline water. You don’t remember how you got here, or even where “here” is, but you are not afraid. There is a statue before you, of a woman who looks to be weeping. Clear water from the cave’s ceiling drips down her stone cheeks. Her face turns to look at you, revealing kind but sorrowful brown eyes. "What is your name, traveler?"`,
@@ -214,9 +213,9 @@ const quizGame = [
     //you'd get an alert/message: You've befriended a dragon!
     //good ending
   },
-}];
+};
 //I don't know if we should do all the endings in one variable, I'm going to for now
-const endings = [
+const endings = 
 {
   leave: {}, //taken to ending screen: Reward for least effort possible (or smthn like this)
   bad: {
@@ -229,7 +228,7 @@ const endings = [
   takeHand: {
     question: `You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.`, //taken to good ending screen
   },
-}];
+};
 //bad:Congratulations! You were subjected to eternal torment! Play again?
 //good: Congratulations! You have achieved contentment. I’m happy for you! Play again?
 //easter egg:
@@ -238,7 +237,7 @@ The player will have another option next to Play again? Called ‘use key’.
 USE KEY:
 This takes them to a screen with pictures of both of our dogs on it :)) Kacey and JoJo :)) */
 
-const start = function() {
+/*const start = function() {
 quizGame.forEach((event) =>
 DOMSelectors.displayContainer.insertAdjacentHTML("beforeend", 
 `<div class="container">
@@ -253,6 +252,8 @@ DOMSelectors.displayContainer.insertAdjacentHTML("beforeend",
 <a class="next">Onwards!</a>
 </div>`)
 );
-}
+};
 
 start();
+*/
+
