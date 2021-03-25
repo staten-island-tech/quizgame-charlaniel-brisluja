@@ -1,3 +1,6 @@
+DOMSelectors = {
+  displayContainer: document.querySelector(".container"),
+};
 //I have to go back and replace all the quotation marks with backtics for the questions that have dialogue
 //this is actually so tedious
 //there are six events and five questions because I counted the door as an event in the code and not on the doc
@@ -7,7 +10,12 @@ IF THE PERSON GOT TWO OUT OF FOUR OF THE POSITIVES, THEY HAVE THE OPPORTUNITY TO
 POSITIVES = GOT FEMUR BONE FROM CHEST, BEFRIENDED CHESTER, GIVE COIN (it is possible to get two of four if and only if one of the conditions in the chest room is met)
 NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
 
-const questions = {
+const quizGame = [
+{
+  startScreen: {
+    question: `You wake up in a dark cave, submerged in crystalline water. You don’t remember how you got here, or even where “here” is, but you are not afraid. There is a statue before you, of a woman who looks to be weeping. Clear water from the cave’s ceiling drips down her stone cheeks. Her face turns to look at you, revealing kind but sorrowful brown eyes. "What is your name, traveler?"`,
+    input: "",
+  },
   eventOne: {
     question: `"I need you to find my heart, deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
     options: {
@@ -205,9 +213,10 @@ const questions = {
     //you'd get an alert/message: You've befriended a dragon!
     //good ending
   },
-};
+}];
 //I don't know if we should do all the endings in one variable, I'm going to for now
-const endings = {
+const endings = [
+{
   leave: {}, //taken to ending screen: Reward for least effort possible (or smthn like this)
   bad: {
     question: `You pry your eyes open with some effort, and find yourself bloody and tired, slumped on the floor. You move your neck and feel it crack. In fact, all your bones seem to creak at any movement at all. Your parched throat screams for water. You wait. And wait. And wait. And finally, you see a traveler approach. It seems...oh my god, it’s you. It’s you, but without the pain, and without the burden of past choices. You can only hope they make the choices you didn’t.`, //taken to bad ending screen
@@ -219,7 +228,7 @@ const endings = {
   takeHand: {
     question: `You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.`, //taken to good ending screen
   },
-};
+}];
 //bad:Congratulations! You were subjected to eternal torment! Play again?
 //good: Congratulations! You have achieved contentment. I’m happy for you! Play again?
 //easter egg:
@@ -227,3 +236,22 @@ const endings = {
 The player will have another option next to Play again? Called ‘use key’. 
 USE KEY:
 This takes them to a screen with pictures of both of our dogs on it :)) Kacey and JoJo :)) */
+console.log(DOMSelectors.displayContainer);
+const start = function() {
+quizGame.forEach((event) =>
+DOMSelectors.displayContainer.insertAdjacentHTML("beforeend", 
+`<div class="container">
+<div id="quiz-form">
+<h1 id="text">${event.question}</h1>
+ <div id="button-options" class="button-box">
+    <button class="button">${event.options.a}</button>
+    <button class="button">${event.options.b}</button>
+    <button class="button">${event.options.c}</button>
+    <button class="button">${event.options.d}</button>
+</div> 
+<a class="next">Onwards!</a>
+</div>`)
+);
+};
+
+start();

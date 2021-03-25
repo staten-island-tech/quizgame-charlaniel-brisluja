@@ -3,6 +3,7 @@
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
+  --pink-color: #ff4d73;
   --main-font: "Underdog", cursive;
 }
 
@@ -45,59 +46,60 @@ body {
   background-size: 100% 100%;
   padding: 5rem;
 }
-h1, .next
-// ,button 
+h1, .next, button 
 {
   font-family: var(--main-font);
-  font-weight: 900;
   letter-spacing: 0.1rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: left;
 }
-// .button-box {
-//   position: absolute;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 1rem;
-//   bottom: 7rem;
-//   width: 80%;
-//   margin-left: 10%;
-// }
-// button {
-//   top: 60%;
-//   border-radius: 3rem;
-//   border: 0.5rem solid #f6f285;
-//   background-color: #0069ee;
-//   font-size: 3rem;
-//   color: #fff;
-//   transition: 0.2s all;
-//   padding: 2rem 0;
-// }
-// button:hover {
-//   box-shadow: 0 1rem 3rem #f6f285;
-//   transform: translateY(-0.5rem);
-// }
+ .button-box {
+   display: grid;
+   grid-template-columns: 1fr 1fr; //two equal columns
+   gap: 1.5rem;
+   bottom: 7rem;
+   width: 100%;
+   height: 30%;
+   margin-top: 6rem;
+ }
+ button {
+   top: 60%;
+   border-radius: 3rem;
+   border: 0.5rem solid #f6f285;
+   background-color: #0069ee;
+   font-size: 2.25rem;
+   color: #fff;
+   transition: 0.2s all;
+ }
+ button:hover {
+   box-shadow: 0 1rem 3rem #f6f285;
+   transform: translateY(-0.5rem);
+ }
 .next {
-  display: inline-block;
-  font-size: 2.5rem;
-  background-color: var(--blue-color);
+  font-size: 2.25rem;
+  background-color: var(--pink-color);
   color: var(--white-color);
-  padding: .5em 1em;
   text-decoration: none;
   border-radius: 3rem;
   transition: 0.2s all;
   border: 0.4rem solid var(--white-color);
-  margin-left: 75%;
-  margin-top: 45%;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; //fix this when you have the time (or just dont? cuz it doesnt really matter at all?? lol???)
+  margin-top: 3rem;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 .next:hover,
 .next:focus {
   background-color: var(--white-color);
-  color: var(--blue-color);
-  border: 0.4rem solid var(--blue-color);
+  color: var(--pink-color);
+  border: 0.4rem solid var(--pink-color);
 }
+ /*
 form label span {
   display: block;
   //box-sizing: border-box;
@@ -118,4 +120,4 @@ form input[type=radio]:checked + span {
   border: 0.5rem solid var(--yellow-color);
   background-color: var(--blue-color);
   color: var(--white-color);
-}
+}*/
