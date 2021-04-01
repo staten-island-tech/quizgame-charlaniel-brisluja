@@ -12,10 +12,8 @@ import { quizGame, endings } from "./questions";
 //   const um = document.getElementById("next");
 //   next.addEventListener("click", alert("hiya"));
 // }
-document.getElementById("next").onclick = function () {
-  myFunction();
-};
+const nextButton = document.querySelector('#next');
+nextButton.addEventListener('click', function(alertTest) {
+  alert("Great success!!");
+});
 
-function myFunction() {
-  document.getElementById("next").innerHTML = "YOU CLICKED ME!";
-}
