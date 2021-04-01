@@ -49,6 +49,9 @@ const quizGame = [
     },
     ifLeave: {
       question: "Wow, you didn't even try.", //Here you'd get an ending:Reward for least effort possible (or smthn like this)
+      options: {
+        a: "Play again (for real this time!)", 
+      },
     },
     ifKey: {
       question:
@@ -118,7 +121,7 @@ const quizGame = [
     },
     eventFour: {
       question:
-        "You hear the voice of the statue in the back of your mind. '[NAME], things are going to get more dangerous from here. Be careful.' You breathe in deeply and face the next room with determination. You can see three identical chests on the floor.",
+        "You hear the voice of the statue in the back of your mind. 'Things, are going to get more dangerous from here. Be careful.' You breathe in deeply and face the next room with determination. You can see three identical chests on the floor.",
       options: {
         a: "Investigate",
         b: "Pick a chest",
@@ -169,12 +172,20 @@ const quizGame = [
     },
     chestThree: {
       question:
-        "You approach the chest on the right. It opens easily, although its lid is blanketed in a thick layer of dust. Inside you find a small bag. When you open it, six perfectly shaped white dice tumble into your palm. The die with 20 sides has a skull where the 20 should be. You wonder how it got here as you tuck it into your pocket.A shimmering magic doorway opens behind the chests.",
-    },
+        "You approach the chest on the right. It opens easily, although its lid is blanketed in a thick layer of dust. Inside you find a small bag. When you open it, six perfectly shaped white dice tumble into your palm. The die with 20 sides has a skull where the 20 should be. You wonder how it got here as you tuck it into your pocket. A shimmering magic doorway opens behind the chests.",
+        options: {
+          a: "Go through the doorway",
+        },
+      },
     eventFive: {
       question:
-        "You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”", //here we'd need a space for inserting text, idk how to do that and I am not gonna look it up rn
-      answer: "Piano", //we'd also want piano music to play on submit,,,
+        `You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”`, //here we'd need a space for inserting text, idk how to do that and I am not gonna look it up rn
+        options: {
+          a: "Puzzle",
+          b: "Map",
+          c: "Piano",
+          d: "Chest",
+        },
     },
     eventSix: {
       question:
@@ -216,7 +227,7 @@ const quizGame = [
       }, //positives and negatives here too, not gonna write the value rn cause I'm not sure how to or even if that's what I'm supposed to do
     },
     fight: {
-      question: `You punch it, as hard as you can, and fight like your life depends on it! It takes everything you’ve got, what feels like more than you can give, but finally you...lose. The dragon roars ferociously and you are rocketed back, hitting a nearby wall. `,
+      question: `You punch it, as hard as you can, and fight like your life depends on it! It takes everything you’ve got, what feels like more than you can give, but finally you...lose. The dragon roars ferociously and you are rocketed back, hitting a nearby wall.`,
       //bad ending
     },
     befriend: {
@@ -224,16 +235,17 @@ const quizGame = [
       //you'd get an alert/message: You've befriended a dragon!
       //good ending
     },
-  },
-];
-//I don't know if we should do all the endings in one variable, I'm going to for now
-const endings = [
-  {
     leave: {
       question: "Reward for least effort ever or something",
+      options: {
+        a: "Play again (for real this time!)",
+      },
     }, //taken to ending screen: Reward for least effort possible (or smthn like this)
     bad: {
       question: `You pry your eyes open with some effort, and find yourself bloody and tired, slumped on the floor. You move your neck and feel it crack. In fact, all your bones seem to creak at any movement at all. Your parched throat screams for water. You wait. And wait. And wait. And finally, you see a traveler approach. It seems...oh my god, it’s you. It’s you, but without the pain, and without the burden of past choices. You can only hope they make the choices you didn’t.`, //taken to bad ending screen
+      options: {
+        a: "Try again?",
+      },
     },
     good: {
       question: `You blink, and when you open your eyes, you are back with the statue in the pool of water cave you woke up in. A smile cracks onto her stony face as she gently takes her heart from you. Her eyes are warm and loving, as she reaches out a hand`,
@@ -241,6 +253,9 @@ const endings = [
     },
     takeHand: {
       question: `You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.`, //taken to good ending screen
+      options: {
+        a: "Play again!",
+      },
     },
   },
 ];
@@ -252,4 +267,4 @@ const endings = [
   USE KEY:
   This takes them to a screen with pictures of both of our dogs on it :)) Kacey and JoJo :)) */
 
-export { quizGame, endings };
+export { quizGame };
