@@ -7,6 +7,8 @@ IF THE PERSON GOT TWO OUT OF FOUR OF THE POSITIVES, THEY HAVE THE OPPORTUNITY TO
 POSITIVES = GOT FEMUR BONE FROM CHEST, BEFRIENDED CHESTER, GIVE COIN (it is possible to get two of four if and only if one of the conditions in the chest room is met)
 NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
 
+// object >> array >> ((object))
+
 const quizGame = [
     { 
       eventIndex: 0,
@@ -17,7 +19,22 @@ const quizGame = [
           answerIndex: 1,
         },
       ],
-    }];
+    },
+    {
+      eventIndex: 1,
+      question: `"I need you to find my heart, deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
+      options: [
+        {
+          a: "Accept", //goes to eventTwo
+          answerIndex: 3,
+        },
+        {
+          b: "Walk away",
+          answerIndex: 2,
+        },
+      ],
+    },
+  ];
 /*
 const quizGame = [
   {
