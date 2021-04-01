@@ -8,18 +8,31 @@ POSITIVES = GOT FEMUR BONE FROM CHEST, BEFRIENDED CHESTER, GIVE COIN (it is poss
 NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
 
 const quizGame = [
-  {
-    startScreen: {
-      eventIndexValue: 0,
+    { 
+      eventIndex: 0,
       question: `You wake up in a dark cave, submerged in crystalline water. You don’t remember how you got here, or even where “here” is, but you are not afraid. There is a statue before you, of a woman who looks to be weeping. Clear water from the cave’s ceiling drips down her stone cheeks. Her face turns to look at you, revealing kind but sorrowful brown eyes.`,
       options: [
         {
           a: "Listen to her",
-          answerIndexValue: 1,
+          answerIndex: 1,
+        },
+      ],
+    }];
+/*
+const quizGame = [
+  {
+    startScreen: {
+      eventIndex: 0,
+      question: `You wake up in a dark cave, submerged in crystalline water. You don’t remember how you got here, or even where “here” is, but you are not afraid. There is a statue before you, of a woman who looks to be weeping. Clear water from the cave’s ceiling drips down her stone cheeks. Her face turns to look at you, revealing kind but sorrowful brown eyes.`,
+      options: [
+        {
+          a: "Listen to her",
+          answerIndex: 1,
         },
       ],
     },
     eventOne: {
+      eventIndex: 1,
       question: `"I need you to find my heart, deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
       options: [
         {
@@ -35,6 +48,9 @@ const quizGame = [
     ifNoOne: {
       eventIndex: 2,
       question: "You wake up in a grassy field….it was a dream?", //Here you'd get an ending:Reward for least effort possible (or smthn like this)
+      options: {
+        a: "Play again?", 
+      },
     },
     eventTwo: {
       eventIndex: 3,
@@ -159,11 +175,14 @@ const quizGame = [
     },
     ifRun: {
       question:
-        "You run away but there’s nowhere to go but backwards! You rush into the other room and the cave’s opening shuts behind you, locking you out forever. The person on the floor chuckles.", //here you'd get an ending: You almost got eaten!
-    },
+        "You run away but there’s nowhere to go but backwards! You rush into the other room and the cave’s opening shuts behind you, locking you out forever. The person on the floor chuckles. You almost got eaten!", //here you'd get an ending: You almost got eaten!
+        options: {
+          a: "Play again?", 
+        },
+      },
     ifFight: {
       question:
-        "You kick the chest! Oh my god, is it even a chest?? You have no time to wonder about it because its sharp teeth are bearing down on your fragile, human body. It bites, you evade, it roars, you punch! Eventually, you manage to subdue the chest but oh god at what cost...you’re covered in blood.A shimmering magic doorway opens behind the chests.",
+        "You kick the chest! Oh my god, is it even a chest?? You have no time to wonder about it because its sharp teeth are bearing down on your fragile, human body. It bites, you evade, it roars, you punch! Eventually, you manage to subdue the chest but oh god at what cost...you’re covered in blood. A shimmering magic doorway opens behind the chests.",
       value: -1,
     },
     ifBefriend: {
