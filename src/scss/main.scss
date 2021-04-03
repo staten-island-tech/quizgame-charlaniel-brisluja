@@ -81,8 +81,6 @@ h1 {
 }
 .button:focus {
   border: 0.5rem solid var(--lightblue-color);
-}
-.button:focus:hover {
   box-shadow: 0 1rem 3rem var(--lightblue-color);
 }
 .button:focus, .next:focus {
