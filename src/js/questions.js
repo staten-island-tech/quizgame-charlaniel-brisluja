@@ -18,6 +18,15 @@ const quizGame = [
           a: "Listen to her",
           answerIndex: 1,
         },
+        { 
+           b: '',
+        },
+        {
+          c: '',
+        },
+        {
+          d: '',
+        },
       ],
     },
     {
@@ -31,6 +40,12 @@ const quizGame = [
         {
           b: "Walk away",
           answerIndex: 2,
+        },
+        {
+          c: '',
+        },
+        {
+          d: '',
         },
       ],
     },

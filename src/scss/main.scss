@@ -1,5 +1,6 @@
 :root {
   --blue-color: #0069ee;
+  --lightblue-color: #59caff;
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
@@ -79,7 +80,10 @@ h1 {
   transform: translateY(-0.5rem);
 }
 .button:focus {
-  border: 0.5rem solid #59caff;
+  border: 0.5rem solid var(--lightblue-color);
+}
+.button:focus:hover {
+  box-shadow: 0 1rem 3rem var(--lightblue-color);
 }
 .button:focus, .next:focus {
   outline: none;
