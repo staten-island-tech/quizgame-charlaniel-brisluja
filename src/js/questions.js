@@ -17,13 +17,13 @@ const quizGame = [
     options: [
       { a: "Start Adventure!", answerIndex: 0 },
       {
-        b: "l",
+        b: "",
       },
       {
-        c: "m",
+        c: "",
       },
       {
-        d: "n",
+        d: "",
       },
     ],
   },
