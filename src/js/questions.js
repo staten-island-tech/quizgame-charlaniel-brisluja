@@ -10,46 +10,63 @@ NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
 // object >> array >> ((object))
 
 const quizGame = [
-    { 
-      eventIndex: 0,
-      question: `You wake up in a dark cave, submerged in crystalline water. You don’t remember how you got here, or even where “here” is, but you are not afraid. There is a statue before you, of a woman who looks to be weeping. Clear water from the cave’s ceiling drips down her stone cheeks. Her face turns to look at you, revealing kind but sorrowful brown eyes.`,
-      options: [
-        {
-          a: "Listen to her",
-          answerIndex: 1,
-        },
-        { 
-           b: '',
-        },
-        {
-          c: '',
-        },
-        {
-          d: '',
-        },
-      ],
-    },
-    {
-      eventIndex: 1,
-      question: `"I need you to find my heart, deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
-      options: [
-        {
-          a: "Accept", //goes to eventTwo
-          answerIndex: 3,
-        },
-        {
-          b: "Walk away",
-          answerIndex: 2,
-        },
-        {
-          c: '',
-        },
-        {
-          d: '',
-        },
-      ],
-    },
-  ];
+  {
+    eventIndex: -1,
+    question: `Welcome traveler, to the start of your Galguddian adventure!`,
+    //name prompt, eventually ??
+    options: [
+      { a: "Start Adventure!", answerIndex: 0 },
+      {
+        b: "l",
+      },
+      {
+        c: "m",
+      },
+      {
+        d: "n",
+      },
+    ],
+  },
+  {
+    eventIndex: 0,
+    question: `You wake up in a dark cave, submerged in crystalline water. You don’t remember how you got here, or even where “here” is, but you are not afraid. There is a statue before you, of a woman who looks to be weeping. Clear water from the cave’s ceiling drips down her stone cheeks. Her face turns to look at you, revealing kind but sorrowful brown eyes.`,
+    options: [
+      {
+        a: "Listen to her",
+        answerIndex: 1,
+      },
+      {
+        b: "",
+      },
+      {
+        c: "",
+      },
+      {
+        d: "",
+      },
+    ],
+  },
+  {
+    eventIndex: 1,
+    question: `"I need you to find my heart, deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
+    options: [
+      {
+        a: "Accept", //goes to eventTwo
+        answerIndex: 3,
+      },
+      {
+        b: "Walk away",
+        answerIndex: 2,
+      },
+      {
+        c: "",
+      },
+      {
+        d: "",
+      },
+    ],
+  },
+];
 /*
 const quizGame = [
   {
