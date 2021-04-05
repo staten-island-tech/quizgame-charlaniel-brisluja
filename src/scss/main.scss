@@ -108,15 +108,18 @@ h1 {
 .next:hover {
   border-radius: 2rem;
 }
-i::before {
+.fas::before {
  // position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  right: 0;
+  top: 0;
   opacity: 0;
-  font-size: 2rem;
+  height: 100%;
+  width: 40px;
   transition: all 0.2s linear 0s;
 }
-.next:hover i {
+.next:hover .fas {
   opacity: 1;
 }
