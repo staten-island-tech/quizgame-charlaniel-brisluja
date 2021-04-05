@@ -1,6 +1,6 @@
 :root {
   --blue-color: #0069ee;
-  --lightblue-color: #4bc6ff;
+  --lightblue-color: #59caff;
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
@@ -69,18 +69,18 @@ h1 {
   top: 60%;
   min-height: 9rem;
   border-radius: 3rem;
-  border: 0.4rem solid var(--yellow-color);
+  border: 0.5rem solid var(--yellow-color);
   background-color: #0069ee;
   font-size: 2.25rem;
   color: #fff;
-  transition: 0.15s all;
+  transition: 0.2s all;
 }
 .button:hover {
   box-shadow: 0 1rem 3rem var(--yellow-color);
   transform: translateY(-0.5rem);
 }
 .button:focus {
-  border: 0.4rem solid var(--lightblue-color);
+  border: 0.5rem solid var(--lightblue-color);
 }
 .button:focus:hover {
   box-shadow: 0 1rem 3rem var(--lightblue-color);
@@ -95,7 +95,7 @@ h1 {
   text-decoration: none;
   border-radius: 3rem;
   transition: 0.2s all;
-  border: 0.3rem solid var(--white-color);
+  border: 0.4rem solid var(--white-color);
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: center;
@@ -106,20 +106,30 @@ h1 {
   transition: 0.2s all;
 }
 .next:hover {
-  border-radius: 2rem;
+  background-color: var(--white-color);
+  color: var(--pink-color);
+  border: 0.4rem solid var(--pink-color);
+  font-weight: 900;
 }
-.fas::before {
- // position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 0;
-  top: 0;
-  opacity: 0;
-  height: 100%;
-  width: 40px;
-  transition: all 0.2s linear 0s;
+/*
+form label span {
+  display: block;
+  //box-sizing: border-box;
+  padding: 1.4rem 1.2rem;
+  border: 0.5rem solid var(--yellow-color);
+  cursor: pointer;
+  border-radius: 3rem;
 }
-.next:hover .fas {
-  opacity: 1;
+form label:hover span, form label:focus span {
+  border: 0.5rem solid var(--yellow-color);
+  background-color: var(--blue-color);
+  color: var(--white-color);
 }
+form input[type=radio] {
+  visibility: hidden;
+}
+form input[type=radio]:checked + span {
+  border: 0.5rem solid var(--yellow-color);
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}*/
