@@ -1,5 +1,6 @@
 const DOMSelectors = {
   displayContainer: document.querySelector(".container"),
+  optionButtons: document.querySelector("#button-options"),
   buttonBox: document.querySelector(".button-box"),
   buttonOne: document.querySelector("#button1"),
   buttonTwo: document.querySelector("#button2"),

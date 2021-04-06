@@ -25,9 +25,11 @@ function start() {
   </div> 
   <a class="next">Onwards!</a>`;
 
-  DOMSelectors.buttonOne.addEventListener("click", function () {
-    currentAnswerIndex = selectedEvent.options[0].answerIndex;
-    alert(currentAnswerIndex);
+  DOMSelectors.optionButtons.addEventListener("click", function (event) {
+    if (event.target === buttonOne) {
+      currentAnswerIndex = selectedEvent.options[0].answerIndex;
+      console.log(currentAnswerIndex);
+    }
   });
   //this is supposed to repeat what is done for the start of the game above with the subsequent eventIndexes and CAIs, it works but isn't currently b/c the above function is not working
   DOMSelectors.nextButton.addEventListener("click", function () {
