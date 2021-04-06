@@ -14,6 +14,26 @@ HOW TO DEPLOY SITE
 - Type in npm run build
 - Make site in netlify (command: npm run build , directory: dist)
 **********
+[{{My failed attempt at a foreach:}}]
+  DOMSelectors.optionButtons.forEach((button) => {
+    button.addEventListener('click', function() { 
+      if (button.target === DOMSelectors.buttonOne) {
+        currentAnswerIndex = selectedEvent.options[0].answerIndex;
+        alert(currentAnswerIndex);
+      } else if (button.target === DOMSelectors.buttonTwo) {
+        currentAnswerIndex = selectedEvent.options[1].answerIndex;
+        alert(currentAnswerIndex);
+      } else if (button.target === DOMSelectors.buttonThree) {
+        currentAnswerIndex = selectedEvent.options[2].answerIndex;
+        alert(currentAnswerIndex);
+        } else {
+          currentAnswerIndex = selectedEvent.options[3].answerIndex;
+          alert(currentAnswerIndex);
+        }
+  });
+});
+
+
 Code Blurbs and Concepts 
 
 if currentAnswerIndex === (index of ending event) && keyState === true 
