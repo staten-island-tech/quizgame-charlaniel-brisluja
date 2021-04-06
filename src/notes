@@ -1,11 +1,18 @@
 Goals 4/4: 
 - by the end of next cs class (tuesday), we want to figure out why addEventListener isn't working for the buttons
 - by cs class after that (friday), we want to figure out how to delete the buttons if there are no options there to justify the buttons' presence
+
+WHALEN ADVICE:
+- Change innerHTML of individual buttons 
+- Make consts of document.id().value for each button
+- % signs in html?? (look at album-builder project from whalen)
+- ***Look at event delegation on stackoverflow (put click on displayContainer and see what target was clicked and then do stuff)
+- "freecodecamp" "Adding an event listener to dynamically created element..."---CHECK IT OUT
 **********
 HOW TO DEPLOY SITE
 - Change main in package.json to dist/index.html instead of index.json
 - Type in npm run build
-- Make site in netlify (command: npm run build  directory: dist)
+- Make site in netlify (command: npm run build , directory: dist)
 **********
 Code Blurbs and Concepts 
 

@@ -25,7 +25,7 @@ function start() {
   </div> 
   <a class="next">Onwards!</a>`;
 
-  DOMSelectors.buttonBox.firstChild.addEventListener("click", function () {
+  DOMSelectors.buttonOne.addEventListener("click", function () {
     currentAnswerIndex = selectedEvent.options[0].answerIndex;
     alert(currentAnswerIndex);
   });
