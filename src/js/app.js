@@ -15,47 +15,59 @@ function start() {
   //addEventListener isn't working rn, the rest is
 
   //inserts info from welcome page (CAI -1) into html, we are having issues w/ it b/c it breaks the going from button option 0 to next page
-    DOMSelectors.nextButton.onclick = displayEvent;
-      
+  DOMSelectors.nextButton.onclick = displayEvent;
+  window.onload = displayEvent;
+
   function displayEvent() {
+    let selectedEvent = quizGame.find(
+      (event) => event.eventIndex === currentAnswerIndex
+    );
     DOMSelectors.question.innerHTML = selectedEvent.question;
     DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
   }
-  DOMSelectors.buttonOne.addEventListener('click', function() { 
+  DOMSelectors.buttonOne.addEventListener("click", function () {
     currentAnswerIndex = selectedEvent.options[0].answerIndex;
     alert(currentAnswerIndex);
     if (DOMSelectors.buttonOne.textContent === "") {
-      alert("Oops!😳 This button is not an option. Try one with an action in it!😊");
+      alert(
+        "Oops!😳 This button is not an option. Try one with an action in it!😊"
+      );
     }
   });
-  DOMSelectors.buttonTwo.addEventListener('click', function() { 
+  DOMSelectors.buttonTwo.addEventListener("click", function () {
     if (DOMSelectors.buttonTwo.textContent === "") {
-      alert("Oops!😳 This button is not an option. Try one with an action in it!😊");
+      alert(
+        "Oops!😳 This button is not an option. Try one with an action in it!😊"
+      );
     } else {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
       alert(currentAnswerIndex);
     }
   });
-  DOMSelectors.buttonThree.addEventListener('click', function() { 
+  DOMSelectors.buttonThree.addEventListener("click", function () {
     if (DOMSelectors.buttonThree.textContent === "") {
-      alert("Oops!😳 This button is not an option. Try one with an action in it!😊");
+      alert(
+        "Oops!😳 This button is not an option. Try one with an action in it!😊"
+      );
     } else {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
       alert(currentAnswerIndex);
     }
   });
-  DOMSelectors.buttonFour.addEventListener('click', function() { 
+  DOMSelectors.buttonFour.addEventListener("click", function () {
     if (DOMSelectors.buttonFour.textContent === "") {
-      alert("Oops!😳 This button is not an option. Try one with an action in it!😊");
+      alert(
+        "Oops!😳 This button is not an option. Try one with an action in it!😊"
+      );
     } else {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
       alert(currentAnswerIndex);
     }
   });
-/*
+  /*
   //this is supposed to repeat what is done for the start of the game above with the subsequent eventIndexes and CAIs, it works but isn't currently b/c the above function is not working
   DOMSelectors.nextButton.addEventListener("click", function () {
     let nextSelectedEvent = quizGame.find(
