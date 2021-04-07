@@ -15,12 +15,15 @@ function start() {
   //addEventListener isn't working rn, the rest is
 
   //inserts info from welcome page (CAI -1) into html, we are having issues w/ it b/c it breaks the going from button option 0 to next page
+    DOMSelectors.nextButton.onclick = displayEvent;
+      
+  function displayEvent() {
     DOMSelectors.question.innerHTML = selectedEvent.question;
     DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
-
+  }
   DOMSelectors.buttonOne.addEventListener('click', function() { 
     currentAnswerIndex = selectedEvent.options[0].answerIndex;
     alert(currentAnswerIndex);
@@ -52,10 +55,10 @@ function start() {
       alert(currentAnswerIndex);
     }
   });
-
+/*
   //this is supposed to repeat what is done for the start of the game above with the subsequent eventIndexes and CAIs, it works but isn't currently b/c the above function is not working
   DOMSelectors.nextButton.addEventListener("click", function () {
-    let selectedEvent = quizGame.find(
+    let nextSelectedEvent = quizGame.find(
 (event) => event.eventIndex === currentAnswerIndex);
      // console.log(selectedEvent.eventIndex);
     DOMSelectors.question.innerHTML = selectedEvent.question;
@@ -63,7 +66,7 @@ function start() {
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
-  });
+  });*/
 }
 
 start();
