@@ -1,6 +1,13 @@
-Goals 4/4: 
-- by the end of next cs class (tuesday), we want to figure out why addEventListener isn't working for the buttons
-- by cs class after that (friday), we want to figure out how to delete the buttons if there are no options there to justify the buttons' presence
+TO DO LIST BITCHES: 
+- add indexes to all events/options
+- figure out key state
+- figure out positives + negatives
+- making display if/else statements look nicer (concise babey)
+
+Less Urgent:
+- picture (for intro maybe, and KEY EASTER EGG)(if event.hasOwnProperty image === true {display: image})
+- name input (at start)
+- maybe different ending design 
 
 WHALEN ADVICE:
 - Change innerHTML of individual buttons 

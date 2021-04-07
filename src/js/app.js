@@ -7,9 +7,7 @@ function start() {
   //sets currentAnswerIndex to the event page we are currently on, -1 is the welcome page
   let currentAnswerIndex = -1;
   //finds the event whose eventIndex equals the CAI thereby finding the welcome page
-  let selectedEvent = quizGame.find(
-    (event) => event.eventIndex === currentAnswerIndex
-  );
+
   //THESE DON'T WORK ARE MEAN TO US
   //intent is to set the CAI equal to the answerIndex that is updated on click of OPTION button and ONWARDS button (it should be just at option button rn)
   //addEventListener isn't working rn, the rest is
@@ -27,46 +25,94 @@ function start() {
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
-  }
-  DOMSelectors.buttonOne.addEventListener("click", function () {
-    currentAnswerIndex = selectedEvent.options[0].answerIndex;
-    alert(currentAnswerIndex);
-    if (DOMSelectors.buttonOne.textContent === "") {
-      alert(
-        "Oops!😳 This button is not an option. Try one with an action in it!😊"
-      );
-    }
-  });
-  DOMSelectors.buttonTwo.addEventListener("click", function () {
-    if (DOMSelectors.buttonTwo.textContent === "") {
-      alert(
-        "Oops!😳 This button is not an option. Try one with an action in it!😊"
-      );
+    if (
+      selectedEvent.options[1].b === "" &&
+      selectedEvent.options[2].c === "" &&
+      selectedEvent.options[3].d === ""
+    ) {
+      DOMSelectors.buttonOne.style.display = "inline-block";
+      DOMSelectors.buttonTwo.style.display = "none";
+      DOMSelectors.buttonThree.style.display = "none";
+      DOMSelectors.buttonFour.style.display = "none";
+    } else if (
+      selectedEvent.options[2].c === "" &&
+      selectedEvent.options[3].d === ""
+    ) {
+      DOMSelectors.buttonOne.style.display = "inline-block";
+      DOMSelectors.buttonTwo.style.display = "inline-block";
+      DOMSelectors.buttonThree.style.display = "none";
+      DOMSelectors.buttonFour.style.display = "none";
+    } else if (selectedEvent.options[3].d === "") {
+      DOMSelectors.buttonOne.style.display = "inline-block";
+      DOMSelectors.buttonTwo.style.display = "inline-block";
+      DOMSelectors.buttonThree.style.display = "inline-block";
+      DOMSelectors.buttonFour.style.display = "none";
     } else {
+      DOMSelectors.buttonOne.style.display = "inline-block";
+      DOMSelectors.buttonTwo.style.display = "inline-block";
+      DOMSelectors.buttonThree.style.display = "inline-block";
+      DOMSelectors.buttonFour.style.display = "inline-block";
+    }
+  }
+
+  document.addEventListener("click", function (option) {
+    let selectedEvent = quizGame.find(
+      (event) => event.eventIndex === currentAnswerIndex
+    );
+    if (option.target === DOMSelectors.buttonOne) {
+      currentAnswerIndex = selectedEvent.options[0].answerIndex;
+      alert(currentAnswerIndex);
+    } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
       alert(currentAnswerIndex);
-    }
-  });
-  DOMSelectors.buttonThree.addEventListener("click", function () {
-    if (DOMSelectors.buttonThree.textContent === "") {
-      alert(
-        "Oops!😳 This button is not an option. Try one with an action in it!😊"
-      );
-    } else {
+    } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
       alert(currentAnswerIndex);
-    }
-  });
-  DOMSelectors.buttonFour.addEventListener("click", function () {
-    if (DOMSelectors.buttonFour.textContent === "") {
-      alert(
-        "Oops!😳 This button is not an option. Try one with an action in it!😊"
-      );
-    } else {
+    } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
       alert(currentAnswerIndex);
     }
   });
+
+  // DOMSelectors.buttonOne.addEventListener("click", function () {
+  //   currentAnswerIndex = selectedEvent.options[0].answerIndex;
+  //   alert(currentAnswerIndex);
+  //   if (DOMSelectors.buttonOne.textContent === "") {
+  //     alert(
+  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
+  //     );
+  //   }
+  // });
+  // DOMSelectors.buttonTwo.addEventListener("click", function () {
+  //   if (DOMSelectors.buttonTwo.textContent === "") {
+  //     alert(
+  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
+  //     );
+  //   } else {
+  //     currentAnswerIndex = selectedEvent.options[1].answerIndex;
+  //     alert(currentAnswerIndex);
+  //   }
+  // });
+  // DOMSelectors.buttonThree.addEventListener("click", function () {
+  //   if (DOMSelectors.buttonThree.textContent === "") {
+  //     alert(
+  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
+  //     );
+  //   } else {
+  //     currentAnswerIndex = selectedEvent.options[2].answerIndex;
+  //     alert(currentAnswerIndex);
+  //   }
+  // });
+  // DOMSelectors.buttonFour.addEventListener("click", function () {
+  //   if (DOMSelectors.buttonFour.textContent === "") {
+  //     alert(
+  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
+  //     );
+  //   } else {
+  //     currentAnswerIndex = selectedEvent.options[3].answerIndex;
+  //     alert(currentAnswerIndex);
+  //   }
+  // });
   /*
   //this is supposed to repeat what is done for the start of the game above with the subsequent eventIndexes and CAIs, it works but isn't currently b/c the above function is not working
   DOMSelectors.nextButton.addEventListener("click", function () {
