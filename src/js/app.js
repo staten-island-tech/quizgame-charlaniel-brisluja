@@ -57,7 +57,7 @@ function start() {
   DOMSelectors.nextButton.addEventListener("click", function () {
     let selectedEvent = quizGame.find(
 (event) => event.eventIndex === currentAnswerIndex);
-      console.log(selectedEvent.eventIndex);
+     // console.log(selectedEvent.eventIndex);
     DOMSelectors.question.innerHTML = selectedEvent.question;
     DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
