@@ -12,7 +12,7 @@ NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER */
 const quizGame = [
   {
     eventIndex: -1,
-    question: `Welcome traveler, to the start of your Galguddian adventure!`,
+    question: `Welcome, traveler, to the start of your Galguddian adventure!`,
     //name prompt, eventually ??
     options: [
       { a: "Start Adventure!", answerIndex: 0 },
@@ -48,7 +48,7 @@ const quizGame = [
   },
   {
     eventIndex: 1,
-    question: `"I need you to find my heart, deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
+    question: `"I need you to find my heart deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
     options: [
       {
         a: "Accept", //goes to eventTwo
