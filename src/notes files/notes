@@ -1,15 +1,5 @@
-{
-    eventIndex: 10,
-    question: "",
-    options: [
-      { a: "", answerIndex: },
-      { b: "", answerIndex: }, 
-      { c: "", answerIndex: }, 
-      { d: "", answerIndex: }],
-  },
-
 TO DO LIST BITCHES: 
-- add indexes to all events/options
+- add indexes to all events/options✅(except for endings: see comments in questions.js file)
 - figure out key state
 - figure out positives + negatives
 - making display if/else statements look nicer (concise babey)
