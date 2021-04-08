@@ -57,6 +57,7 @@ function start() {
       DOMSelectors.buttonThree.style.display = "inline-block";
       DOMSelectors.buttonFour.style.display = "inline-block";
     }
+    console.log(selectedEvent);
   }
 
   document.addEventListener("click", function (option) {
@@ -65,16 +66,16 @@ function start() {
     );
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     }
   });
 

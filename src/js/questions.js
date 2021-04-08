@@ -57,7 +57,6 @@ const quizGame = [
       {
         b: "Walk away",
         answerIndex: 2,
-        keyState: { key: true },
       },
       {
         c: "",
@@ -65,6 +64,36 @@ const quizGame = [
       {
         d: "",
       },
+    ],
+  },
+  {
+    eventIndex: 2,
+    question: "You wake up in a grassy field… it was a dream?", //Here you'd get an ending:Reward for least effort possible (or smthn like this)
+    options: [
+      {
+      a: "Play again?", 
+      answerIndex: -1,
+      },
+      {
+        b: "",
+      },
+      {
+        c: "",
+      },
+      {
+        d: "",
+      },
+  ],
+  },
+  {
+    eventIndex: 3,
+    question:
+      `"Thank you." You wander deeper into the cave. Before you is a door, about as tall as you are, made of oakwood. What do you do?`,
+    options: [
+      {a: "Leave"},
+      {b: "Look for key",},
+      {c: "Pick lock", },
+      {d: "Knock",},
     ],
   },
 ];
