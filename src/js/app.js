@@ -30,6 +30,8 @@ function start() {
       selectedEvent.options[2].c === "" &&
       selectedEvent.options[3].d === ""
     ) {
+      DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr";
+      DOMSelectors.buttonBox.style.padding = "0 25%";
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "none";
       DOMSelectors.buttonThree.style.display = "none";
@@ -38,6 +40,8 @@ function start() {
       selectedEvent.options[2].c === "" &&
       selectedEvent.options[3].d === ""
     ) {
+      DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr 1fr";
+      DOMSelectors.buttonBox.style.padding = "0";
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "inline-block";
       DOMSelectors.buttonThree.style.display = "none";
@@ -61,16 +65,16 @@ function start() {
     );
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     }
   });
 
