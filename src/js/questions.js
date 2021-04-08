@@ -133,7 +133,6 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
-    keyState: true, //or whatever, idk
   },
   {
     eventIndex: 9,
@@ -150,7 +149,7 @@ const quizGame = [
     question:
       "You put the key into the keyhole. It clicks into place, and the door pushes open.",
     options: [
-      { a: "You have a key now!", answerIndex: 10 },
+      { a: "Walk through", answerIndex: 10 },
       { b: "" },
       { c: "" },
       { d: "" },
@@ -210,7 +209,7 @@ const quizGame = [
   {
     eventIndex: 13,
     question:
-      "They nod back to you, holding the bandages closer to their chest. You see an opening in the wall next to them",
+      "They nod back to you, holding the bandages closer to their chest. You see an opening in the wall next to them.",
     options: [
       { a: "Walk through", answerIndex: 14 },
       { b: "" },
@@ -230,17 +229,27 @@ const quizGame = [
   },
   {
     eventIndex: 15,
-    question: "From afar, you watch the chests. The one in the middle twitches",
+    question: "From afar, you watch the chests. The one in the middle twitches...",
     options: [
-      { a: "Chest 1", answerIndex: 17 },
-      { b: "Chest 2", answerIndex: 18 },
-      { c: "Chest 3", answerIndex: 19 },
+      { a: "Pick chest 1", answerIndex: 17 },
+      { b: "Pick chest 2", answerIndex: 18 },
+      { c: "Pick chest 3", answerIndex: 19 },
       { d: "" },
     ],
   },
   {
     eventIndex: 16,
-    question: "Choose wisely.",
+    question: "Choose wisely!",
+    options: [
+      { a: "Chest 1", answerIndex: 17 },
+      { b: "Chest 2", answerIndex: 18 },
+      { c: "Chest 3", answerIndex: 19 },
+      { d: "Wisely", answerIndex: 16 },
+    ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
+  },
+   {
+    eventIndex: 16,
+    question: "Choose wisely!",
     options: [
       { a: "Chest 1", answerIndex: 17 },
       { b: "Chest 2", answerIndex: 18 },
@@ -312,7 +321,7 @@ const quizGame = [
   {
     eventIndex: 23,
     question:
-      "You keep your breathing calm and steady as you get closer. The chest stops its attack, surprised, and looks up at you (y’know, as much as anything without eyes can look at a person). You pet its lid cautiously, and the chest calms down. It cuddles up to you, and after some time it drops a leather bracelet in your hand.A shimmering magic doorway opens behind the chests.", //alert or something: You've befriended Chester!
+      "You keep your breathing calm and steady as you get closer. The chest stops its attack, surprised, and looks up at you (y’know, as much as anything without eyes can look at a person). You pet its lid cautiously, and the chest calms down. It cuddles up to you, and after some time it drops a leather bracelet in your hand. A shimmering magic doorway opens behind the chests.", //alert or something: You've befriended Chester!
     options: [
       { a: "Go Through", answerIndex: 20 },
       { b: "" },
@@ -337,8 +346,8 @@ const quizGame = [
     question:
       "You speak the answer out loud and the booming voice subsides. A cold rush of wind forces your eyes shut and you feel like you’re moving, but you can’t tell what direction you’re going in. When you finally pry your eyes open, there is a fork in the road in front of you.",
     options: [
-      { a: "Left", answerIndex: 26 },
-      { b: "Right", answerIndex: 27 },
+      { a: "Go left", answerIndex: 26 },
+      { b: "Go right", answerIndex: 27 },
       { c: "" },
       { d: "" },
     ],
@@ -347,7 +356,7 @@ const quizGame = [
     eventIndex: 26,
     question:
       "On the left is a simple podium, holding a crystal. The crystal is heart shaped, floating in midair, radiating warmth and a calm white light.",
-    options: [{ a: "Take it", answerIndex: "" }, { c: "" }, { d: "" }],
+    options: [{ a: "Take it", answerIndex: "" }, {b: ""}, { c: "" }, { d: "" }],
   },
   {
     eventIndex: 27,
@@ -376,7 +385,7 @@ const quizGame = [
   {
     eventIndex: 30,
     question:
-      "You scrounge around in your pack and come up with a small, silver coin. It isn’t much but you feel sort of proud as it clinks against the coins beneath you. The ground rumbles as a massive dragon with wiry bat wings bursts through the pile of riches!! It’s eyes are as tall as you are, and its fetid breath washes over you.",
+      "You scrounge around in your pack and come up with a small, silver coin. It isn’t much but you feel sort of proud as it clinks against the coins beneath you. The ground rumbles as a massive dragon with wiry bat wings bursts through the pile of riches!! Its eyes are as tall as you are, and its fetid breath washes over you.",
     options: [
       { a: "Fight", answerIndex: 31 },
       { b: "Befriend", answerIndex: 32 },

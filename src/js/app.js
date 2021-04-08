@@ -6,6 +6,9 @@ function start() {
 
   //sets currentAnswerIndex to the event page we are currently on, -1 is the welcome page
   let currentAnswerIndex = -1;
+  let currentKeyState = undefined;
+  let currentPositiveValue = 0;
+  let currentNegativeValue = 0;
   //finds the event whose eventIndex equals the CAI thereby finding the welcome page
 
   //THESE DON'T WORK ARE MEAN TO US
@@ -13,6 +16,10 @@ function start() {
   //addEventListener isn't working rn, the rest is
 
   //inserts info from welcome page (CAI -1) into html, we are having issues w/ it b/c it breaks the going from button option 0 to next page
+  
+  //shit dont work
+  
+  //DOMSelectors.nextButton.onclick = displayEvent;
   DOMSelectors.nextButton.onclick = displayEvent;
   window.onload = displayEvent;
 
@@ -30,8 +37,6 @@ function start() {
       selectedEvent.options[2].c === "" &&
       selectedEvent.options[3].d === ""
     ) {
-      DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr";
-      DOMSelectors.buttonBox.style.padding = "0 25%";
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "none";
       DOMSelectors.buttonThree.style.display = "none";
@@ -40,8 +45,6 @@ function start() {
       selectedEvent.options[2].c === "" &&
       selectedEvent.options[3].d === ""
     ) {
-      DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr 1fr";
-      DOMSelectors.buttonBox.style.padding = "0";
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "inline-block";
       DOMSelectors.buttonThree.style.display = "none";
@@ -57,7 +60,32 @@ function start() {
       DOMSelectors.buttonThree.style.display = "inline-block";
       DOMSelectors.buttonFour.style.display = "inline-block";
     }
-    console.log(selectedEvent);
+    if (
+      selectedEvent.options[1].b === "" &&
+      selectedEvent.options[2].c === "" &&
+      selectedEvent.options[3].d === ""
+    ) {
+      DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr";
+      DOMSelectors.buttonBox.style.padding = "0 25%";
+    } else {
+      DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr 1fr";
+      DOMSelectors.buttonBox.style.padding = "0";
+    }
+    if (selectedEvent.eventIndex === 5) {
+      currentKeyState = true;
+      alert("You found a key! This will come in handy later...");
+    }
+    if (selectedEvent.hasOwnProperty("negativeValue")) {
+      currentNegativeValue += selectedEvent.negativeValue;
+      alert(currentNegativeValue);
+    }
+    if (selectedEvent.hasOwnProperty("positiveValue")) {
+      currentPositiveValue += selectedEvent.positiveValue;
+      alert(currentPositiveValue);
+    }
+    //if (selectedEvent.eventIndex === x) {
+    //alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)")
+    //}
   }
 
   document.addEventListener("click", function (option) {
@@ -66,16 +94,16 @@ function start() {
     );
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      alert(currentAnswerIndex);
+      //alert(currentAnswerIndex);
     }
   });
 
