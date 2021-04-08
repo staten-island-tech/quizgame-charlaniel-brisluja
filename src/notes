@@ -1,3 +1,13 @@
+{
+    eventIndex: 10,
+    question: "",
+    options: [
+      { a: "", answerIndex: },
+      { b: "", answerIndex: }, 
+      { c: "", answerIndex: }, 
+      { d: "", answerIndex: }],
+  },
+
 TO DO LIST BITCHES: 
 - add indexes to all events/options
 - figure out key state
