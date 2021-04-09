@@ -20,7 +20,6 @@ function start() {
   //shit dont work
   
   //DOMSelectors.nextButton.onclick = displayEvent;
-  DOMSelectors.nextButton.onclick = displayEvent;
   window.onload = displayEvent;
 
   function displayEvent() {
@@ -105,6 +104,7 @@ function start() {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
       //alert(currentAnswerIndex);
     }
+    displayEvent();
   });
 
   // DOMSelectors.buttonOne.addEventListener("click", function () {
