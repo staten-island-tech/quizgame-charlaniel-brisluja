@@ -160,7 +160,7 @@ const quizGame = [
     question:
       "You slide a small piece of metal into the keyhole, poking and prodding until you feel a click. The door swings open.",
     options: [
-      { a: "You're a real rougish fellow, aren't you?", answerIndex: 10 },
+      { a: "Walk through", answerIndex: 10 },
       { b: "" },
       { c: "" },
       { d: "" },
