@@ -247,16 +247,6 @@ const quizGame = [
       { d: "Wisely", answerIndex: 16 },
     ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
   },
-   {
-    eventIndex: 16,
-    question: "Choose wisely!",
-    options: [
-      { a: "Chest 1", answerIndex: 17 },
-      { b: "Chest 2", answerIndex: 18 },
-      { c: "Chest 3", answerIndex: 19 },
-      { d: "Wisely", answerIndex: 16 },
-    ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
-  },
   {
     eventIndex: 17,
     question:
