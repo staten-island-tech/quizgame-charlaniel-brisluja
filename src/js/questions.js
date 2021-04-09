@@ -120,7 +120,7 @@ const quizGame = [
       { a: "Leave", answerIndex: 4 },
       { b: "Look for key", answerIndex: 5 },
       { c: "Pick lock", answerIndex: 6 },
-      { d: "Knock", answerIndex: 7 },
+      { d: "" },
     ],
   },
   {
@@ -173,7 +173,8 @@ const quizGame = [
     options: [
       { a: "Leave", answerIndex: 4 },
       { b: "Pick lock", answerIndex: 6 },
-      { c: "Look for key", answerIndex: 5 },
+      { c: ""},
+      {d: "" },
     ],
   },
   {
