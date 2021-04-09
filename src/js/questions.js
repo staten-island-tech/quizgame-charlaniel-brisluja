@@ -77,7 +77,7 @@ const quizGame = [
   },
   {
     eventIndex: 2,
-    question: "So you have chosen death. You shall now incur the wrath of our giant bug.",
+    question: "So you have chosen death. You shall now incur the wrath of our giant bug. The solution, if it exists, is so complicated your head will explode.",
     options: [
       {
         a: "Play again? (choose the right option this time, Mr. Whalen...)",
@@ -99,7 +99,7 @@ const quizGame = [
     eventIndex: 3,
     question: `"Thank you." The statue's stone surface evaporates, revealing a beautiful angel. The angel flies away into heaven, splashing a puddle of water on its way. The water droplets create a mirage of Charley and Daniel's smiling faces.`,
     options: [
-      { a: "You are not a monkey, but King Kong. Amazing. You win.", answerIndex: -1},
+      { a: "You are not a monkey. You are King Kong. Amazing. You win!!", answerIndex: -1},
       {
         b: "",
       },
