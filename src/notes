@@ -1,0 +1,42 @@
+TO DO LIST B*TCHES: 
+- add indexes to all events/options✅(except for endings: see comments in questions.js file)
+- figure out key state 1/2✅
+- figure out positives + negatives
+- making display if/else statements look nicer (concise babey)
+
+Less Urgent:
+- picture (for intro maybe, and KEY EASTER EGG)(if event.hasOwnProperty image === true {display: image})
+- name input (at start)
+- maybe different ending design 
+
+KEY EVENT ENDING BS:
+if keystate = true && eventIndex === x { keyButton.display = "inline-block}
+(make a keyButton you scrub and give it its own image display function baby)
+******(if event.hasOwnProperty image === true {display: image})
+
+WHALEN ADVICE:
+- Change innerHTML of individual buttons 
+- Make consts of document.id().value for each button
+- % signs in html?? (look at album-builder project from whalen)
+- ***Look at event delegation on stackoverflow (put click on displayContainer and see what target was clicked and then do stuff)
+- "freecodecamp" "Adding an event listener to dynamically created element..."---CHECK IT OUT
+**********
+HOW TO DEPLOY SITE
+- Change main in package.json to dist/index.html instead of index.json
+- Type in npm run build
+- Make site in netlify (command: npm run build , directory: dist)
+**********
+
+Code Blurbs and Concepts 
+
+if currentAnswerIndex === (index of ending event) && keyState === true 
+if currentAnswerIndex === (index of ending event) && keyState === false then remove/don't display/make KB equal blank quotation marks (contingent on that being a valid method) key button 
+
+Stealing (like the cool kids we are)
+
+function showOption(option) {
+  return option.requiredState == null || option.requiredState(state)
+}
+state = Object.assign(state, option.setState)
+
+Failed Nonsense Goes In the Bad Bin

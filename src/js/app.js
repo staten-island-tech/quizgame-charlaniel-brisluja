@@ -2,38 +2,24 @@ import { DOMSelectors } from "./DOM";
 import { quizGame } from "./questions";
 
 function start() {
-  //let keyIndex = null; trying to figure out how to add key object to state, can't do it until rest of nonsense gets figured out
-
-  //sets currentAnswerIndex to the event page we are currently on, -1 is the welcome page
-  let currentAnswerIndex = -1;
-  let currentKeyState = undefined;
-  let currentPositiveValue = 0;
+  let currentAnswerIndex = -1; //-1 is the starting "welcome" page
+  let currentKeyState = undefined; //leaving undefined, undefined returns false, at key event it will return true (see variable below)
+  let currentPositiveValue = 0; //we...haven't figured these out yet
   let currentNegativeValue = 0;
-  //finds the event whose eventIndex equals the CAI thereby finding the welcome page
 
-  //THESE DON'T WORK ARE MEAN TO US
-  //intent is to set the CAI equal to the answerIndex that is updated on click of OPTION button and ONWARDS button (it should be just at option button rn)
-  //addEventListener isn't working rn, the rest is
-
-  //inserts info from welcome page (CAI -1) into html, we are having issues w/ it b/c it breaks the going from button option 0 to next page
-  
-  //shit dont work
-  //DOMSelectors.nextButton.onclick = displayEvent;
   DOMSelectors.nextButton.onclick = displayEvent;
-  window.onload = displayEvent;
+  window.onload = displayEvent; //makes displayEvent happen both when the next button (which we're getting rid of??) is clicked + when page is loaded
 
   function displayEvent() {
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
-    );
+    ); //main function, finds the event whose evenIndex is currently on the screen and makes it equal to the currentAnswerIndex
     DOMSelectors.question.innerHTML = selectedEvent.question;
     DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
-    DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
-    if (
-      selectedEvent.options[1].b === ""
-    ) {
+    DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d; //these guys just make the innerHTMl (text) of the questions/answers equal the current question/answers displated at the currentAnswerIndex based on given values (defined mainly by a-d)
+    if (selectedEvent.options[1].b === "") {
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "none";
       DOMSelectors.buttonThree.style.display = "none";
@@ -69,15 +55,15 @@ function start() {
       DOMSelectors.buttonBox.style.padding = "0";
     }
     if (selectedEvent.eventIndex === 5) {
-      currentKeyState = true;
+      currentKeyState = true; //makes key value equal true :)
       alert("You found a key! This will come in handy later...");
     } else if (selectedEvent.eventIndex === 6) {
       alert("You're a real roguish fellow, aren't ye?");
-    }
+    } //alerts for key values + rogue at eventIndexes
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
       alert(currentNegativeValue);
-    }
+    } //negatives + positives, still developing
     if (selectedEvent.hasOwnProperty("positiveValue")) {
       currentPositiveValue += selectedEvent.positiveValue;
       alert(currentPositiveValue);
@@ -90,7 +76,7 @@ function start() {
   document.addEventListener("click", function (option) {
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
-    );
+    ); //same as above! shoutout to us for making our entire game work by putting this goblin in both functions
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
       alert(currentAnswerIndex);
@@ -103,60 +89,8 @@ function start() {
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
       alert(currentAnswerIndex);
-    }
+    } //these address iffff each individual button is clicked, then the currentAnswerIndex will be updated according to the answerIndex of the button clicked!
   });
-
-  // DOMSelectors.buttonOne.addEventListener("click", function () {
-  //   currentAnswerIndex = selectedEvent.options[0].answerIndex;
-  //   alert(currentAnswerIndex);
-  //   if (DOMSelectors.buttonOne.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   }
-  // });
-  // DOMSelectors.buttonTwo.addEventListener("click", function () {
-  //   if (DOMSelectors.buttonTwo.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   } else {
-  //     currentAnswerIndex = selectedEvent.options[1].answerIndex;
-  //     alert(currentAnswerIndex);
-  //   }
-  // });
-  // DOMSelectors.buttonThree.addEventListener("click", function () {
-  //   if (DOMSelectors.buttonThree.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   } else {
-  //     currentAnswerIndex = selectedEvent.options[2].answerIndex;
-  //     alert(currentAnswerIndex);
-  //   }
-  // });
-  // DOMSelectors.buttonFour.addEventListener("click", function () {
-  //   if (DOMSelectors.buttonFour.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   } else {
-  //     currentAnswerIndex = selectedEvent.options[3].answerIndex;
-  //     alert(currentAnswerIndex);
-  //   }
-  // });
-  /*
-  //this is supposed to repeat what is done for the start of the game above with the subsequent eventIndexes and CAIs, it works but isn't currently b/c the above function is not working
-  DOMSelectors.nextButton.addEventListener("click", function () {
-    let nextSelectedEvent = quizGame.find(
-(event) => event.eventIndex === currentAnswerIndex);
-     // console.log(selectedEvent.eventIndex);
-    DOMSelectors.question.innerHTML = selectedEvent.question;
-    DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
-    DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
-    DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
-    DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
-  });*/
 }
 
 start();
