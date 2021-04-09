@@ -18,7 +18,6 @@ function start() {
   //inserts info from welcome page (CAI -1) into html, we are having issues w/ it b/c it breaks the going from button option 0 to next page
   
   //shit dont work
-  
   //DOMSelectors.nextButton.onclick = displayEvent;
   DOMSelectors.nextButton.onclick = displayEvent;
   window.onload = displayEvent;
@@ -33,9 +32,7 @@ function start() {
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
     if (
-      selectedEvent.options[1].b === "" &&
-      selectedEvent.options[2].c === "" &&
-      selectedEvent.options[3].d === ""
+      selectedEvent.options[1].b === ""
     ) {
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "none";
@@ -94,16 +91,16 @@ function start() {
     );
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      //alert(currentAnswerIndex);
+      alert(currentAnswerIndex);
     }
   });
 
