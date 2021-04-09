@@ -133,6 +133,7 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
+    keyState: { key: true },
   },
   {
     eventIndex: 9,
@@ -173,8 +174,8 @@ const quizGame = [
     options: [
       { a: "Leave", answerIndex: 4 },
       { b: "Pick lock", answerIndex: 6 },
-      { c: ""},
-      {d: "" },
+      { c: "" },
+      { d: "" },
     ],
   },
   {
@@ -230,7 +231,8 @@ const quizGame = [
   },
   {
     eventIndex: 15,
-    question: "From afar, you watch the chests. The one in the middle twitches...",
+    question:
+      "From afar, you watch the chests. The one in the middle twitches...",
     options: [
       { a: "Pick chest 1", answerIndex: 17 },
       { b: "Pick chest 2", answerIndex: 18 },
@@ -255,7 +257,7 @@ const quizGame = [
       { a: "Chest 1", answerIndex: 17 },
       { b: "Chest 2", answerIndex: 18 },
       { c: "Chest 3", answerIndex: 19 },
-      { d: ""},
+      { d: "" },
     ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
   },
   {
@@ -357,7 +359,12 @@ const quizGame = [
     eventIndex: 26,
     question:
       "On the left is a simple podium, holding a crystal. The crystal is heart shaped, floating in midair, radiating warmth and a calm white light.",
-    options: [{ a: "Take it", answerIndex: "" }, {b: ""}, { c: "" }, { d: "" }],
+    options: [
+      { a: "Take it", answerIndex: "" },
+      { b: "" },
+      { c: "" },
+      { d: "" },
+    ],
   },
   {
     eventIndex: 27,
@@ -400,7 +407,7 @@ const quizGame = [
     question:
       "You punch it, as hard as you can, and fight like your life depends on it! It takes everything you’ve got, what feels like more than you can give, but finally you...lose. The dragon roars ferociously and you are rocketed back, hitting a nearby wall.",
     options: [
-      { a: "What...", answerIndex: "" },
+      { a: "What...", answerIndex: 33 },
       { b: "" },
       { c: "" },
       { d: "" },
@@ -435,7 +442,7 @@ const quizGame = [
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
       { a: "Play again?", answerIndex: -1 },
-      { b: "" },
+      { b: "Use key?", requiredState: (keyState) => keyState.key },
       { c: "" },
       { d: "" },
       // { b: "Use key?", answerIndex: 35 } should have key option here too? also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"

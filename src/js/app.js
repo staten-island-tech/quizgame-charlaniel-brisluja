@@ -6,7 +6,7 @@ function start() {
 
   //sets currentAnswerIndex to the event page we are currently on, -1 is the welcome page
   let currentAnswerIndex = -1;
-  let currentKeyState = undefined;
+  // let currentKeyState = undefined;
   let currentPositiveValue = 0;
   let currentNegativeValue = 0;
   //finds the event whose eventIndex equals the CAI thereby finding the welcome page
@@ -16,9 +16,9 @@ function start() {
   //addEventListener isn't working rn, the rest is
 
   //inserts info from welcome page (CAI -1) into html, we are having issues w/ it b/c it breaks the going from button option 0 to next page
-  
+
   //shit dont work
-  
+
   //DOMSelectors.nextButton.onclick = displayEvent;
   window.onload = displayEvent;
 
@@ -71,13 +71,15 @@ function start() {
       DOMSelectors.buttonBox.style.padding = "0";
     }
     if (selectedEvent.eventIndex === 5) {
-      currentKeyState = true;
       alert("You found a key! This will come in handy later...");
     } else if (selectedEvent.eventIndex === 6) {
       alert("You're a real roguish fellow, aren't ye?");
     } else if (selectedEvent.eventIndex === 16.5) {
       alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
-      }
+    }
+    if (currentKeyState === true) {
+      alert("true");
+    }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
       alert(currentNegativeValue);
@@ -86,6 +88,13 @@ function start() {
       currentPositiveValue += selectedEvent.positiveValue;
       alert(currentPositiveValue);
     }
+    returnKeyState();
+  }
+  function returnKeyState() {
+    return (
+      selectedEvent.options[1].b.requiredState == null ||
+      selectedEvent.options[1].b.requiredState(keyState)
+    );
   }
 
   DOMSelectors.displayQuiz.addEventListener("click", function (option) {
