@@ -75,7 +75,9 @@ function start() {
       alert("You found a key! This will come in handy later...");
     } else if (selectedEvent.eventIndex === 6) {
       alert("You're a real roguish fellow, aren't ye?");
-    }
+    } else if (selectedEvent.eventIndex === 16.5) {
+      alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
+      }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
       alert(currentNegativeValue);
@@ -84,9 +86,6 @@ function start() {
       currentPositiveValue += selectedEvent.positiveValue;
       alert(currentPositiveValue);
     }
-    //if (selectedEvent.eventIndex === x) {
-    //alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)")
-    //}
   }
 
   document.addEventListener("click", function (option) {
