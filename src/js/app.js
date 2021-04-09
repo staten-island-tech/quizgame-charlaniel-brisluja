@@ -102,64 +102,12 @@ function start() {
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
       //alert(currentAnswerIndex);
-    } else if (option.target === DOMSelectors.buttonThree) {
+    } else if (option.target === DOMSelectors.buttonFour) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
       //alert(currentAnswerIndex);
     }
     displayEvent();
   });
-
-  // DOMSelectors.buttonOne.addEventListener("click", function () {
-  //   currentAnswerIndex = selectedEvent.options[0].answerIndex;
-  //   alert(currentAnswerIndex);
-  //   if (DOMSelectors.buttonOne.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   }
-  // });
-  // DOMSelectors.buttonTwo.addEventListener("click", function () {
-  //   if (DOMSelectors.buttonTwo.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   } else {
-  //     currentAnswerIndex = selectedEvent.options[1].answerIndex;
-  //     alert(currentAnswerIndex);
-  //   }
-  // });
-  // DOMSelectors.buttonThree.addEventListener("click", function () {
-  //   if (DOMSelectors.buttonThree.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   } else {
-  //     currentAnswerIndex = selectedEvent.options[2].answerIndex;
-  //     alert(currentAnswerIndex);
-  //   }
-  // });
-  // DOMSelectors.buttonFour.addEventListener("click", function () {
-  //   if (DOMSelectors.buttonFour.textContent === "") {
-  //     alert(
-  //       "Oops!😳 This button is not an option. Try one with an action in it!😊"
-  //     );
-  //   } else {
-  //     currentAnswerIndex = selectedEvent.options[3].answerIndex;
-  //     alert(currentAnswerIndex);
-  //   }
-  // });
-  /*
-  //this is supposed to repeat what is done for the start of the game above with the subsequent eventIndexes and CAIs, it works but isn't currently b/c the above function is not working
-  DOMSelectors.nextButton.addEventListener("click", function () {
-    let nextSelectedEvent = quizGame.find(
-(event) => event.eventIndex === currentAnswerIndex);
-     // console.log(selectedEvent.eventIndex);
-    DOMSelectors.question.innerHTML = selectedEvent.question;
-    DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
-    DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
-    DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
-    DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
-  });*/
 }
 
 start();
