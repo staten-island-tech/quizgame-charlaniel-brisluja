@@ -407,7 +407,7 @@ const quizGame = [
     question:
       "You punch it, as hard as you can, and fight like your life depends on it! It takes everything you’ve got, what feels like more than you can give, but finally you...lose. The dragon roars ferociously and you are rocketed back, hitting a nearby wall.",
     options: [
-      { a: "What...", answerIndex: 33 },
+      { a: "What...", answerIndex: "" },
       { b: "" },
       { c: "" },
       { d: "" },
