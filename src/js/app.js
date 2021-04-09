@@ -88,7 +88,7 @@ function start() {
     }
   }
 
-  document.addEventListener("click", function (option) {
+  DOMSelectors.displayQuiz.addEventListener("click", function (option) {
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
     );
