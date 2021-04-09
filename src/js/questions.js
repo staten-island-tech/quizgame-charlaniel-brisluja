@@ -120,7 +120,7 @@ const quizGame = [
       { a: "Leave", answerIndex: 4 },
       { b: "Look for key", answerIndex: 5 },
       { c: "Pick lock", answerIndex: 6 },
-      { d: "" },
+      { d: "Knock", answerIndex: 7 },
     ],
   },
   {
