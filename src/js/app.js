@@ -71,6 +71,8 @@ function start() {
     if (selectedEvent.eventIndex === 5) {
       currentKeyState = true;
       alert("You found a key! This will come in handy later...");
+    } else if (selectedEvent.eventIndex === 6) {
+      alert("You're a real roguish fellow, aren't ye?");
     }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
