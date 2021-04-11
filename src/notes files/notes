@@ -4,11 +4,6 @@ TO DO LIST BITCHES:
 - figure out positives + negatives
 - making display if/else statements look nicer (concise babey)
 
- // return (
-    //   selectedEvent.options[1].b.requiredState == null ||
-    //   selectedEvent.options[1].b.requiredState(keyState)
-    // );
-
 Less Urgent:
 - picture (for intro maybe, and KEY EASTER EGG)(if event.hasOwnProperty image === true {display: image})
 - name input (at start)
