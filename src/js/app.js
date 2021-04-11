@@ -77,24 +77,14 @@ function start() {
     } else if (selectedEvent.eventIndex === 16.5) {
       alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
     }
-    if (currentKeyState === true) {
-      alert("true");
-    }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
-      alert(currentNegativeValue);
+      return currentNegativeValue;
     }
     if (selectedEvent.hasOwnProperty("positiveValue")) {
       currentPositiveValue += selectedEvent.positiveValue;
-      alert(currentPositiveValue);
-    }
-    returnKeyState();
+      return currentPositiveValue;
   }
-  function returnKeyState() {
-    return (
-      selectedEvent.options[1].b.requiredState == null ||
-      selectedEvent.options[1].b.requiredState(keyState)
-    );
   }
 
   DOMSelectors.displayQuiz.addEventListener("click", function (option) {
@@ -103,16 +93,16 @@ function start() {
     );
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      //alert(currentAnswerIndex);
+      console.log(currentPositiveValue);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      //alert(currentAnswerIndex);
+      console.log(currentPositiveValue);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      //alert(currentAnswerIndex);
+      console.log(currentPositiveValue);
     } else if (option.target === DOMSelectors.buttonFour) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      //alert(currentAnswerIndex);
+      console.log(currentPositiveValue);
     }
     displayEvent();
   });
