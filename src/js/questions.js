@@ -133,7 +133,7 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
-    keyState: { key: true },
+   // keyState: { key: true },
   },
   {
     eventIndex: 9,
@@ -419,7 +419,7 @@ const quizGame = [
     question:
       "You reach your hand out to the dragon, as if it were a large dog. It regards you for a moment, taking stock of your inventory and soul in ways you would not imagine it capable of. After some time, it lowers its head to let you pet it. It moves away, bringing you back a large and glowing white crystal, shaped like a heart. You feel warmth radiating off of it, as the dragon gives you a knowing smile.", //idk
     options: [
-      { a: "Take it", answerIndex: "" },
+      { a: "Take it", answerIndex: 33 },
       { b: "" },
       { c: "" },
       { d: "" },
@@ -442,11 +442,12 @@ const quizGame = [
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
       { a: "Play again?", answerIndex: -1 },
-      { b: "Use key?", requiredState: (keyState) => keyState.key },
+      { b: "Use key?", /*requiredState: (keyState) => keyState.key*/ },
       { c: "" },
       { d: "" },
       // { b: "Use key?", answerIndex: 35 } should have key option here too? also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
     ],
+    keyState: "",
   },
   {
     eventIndex: 36,
