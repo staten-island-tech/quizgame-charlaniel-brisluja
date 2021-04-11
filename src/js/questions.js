@@ -133,7 +133,7 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
-    //keyState: { key: true },
+    keyState: { key: true },
   },
   {
     eventIndex: 9,
