@@ -6,7 +6,7 @@ function start() {
 
   //sets currentAnswerIndex to the event page we are currently on, -1 is the welcome page
   let currentAnswerIndex = -1;
-  // let currentKeyState = undefined;
+  let currentKeyState = {};
   let currentPositiveValue = 0;
   let currentNegativeValue = 0;
   //finds the event whose eventIndex equals the CAI thereby finding the welcome page
@@ -70,15 +70,10 @@ function start() {
       DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr 1fr";
       DOMSelectors.buttonBox.style.padding = "0";
     }
-    if (selectedEvent.eventIndex === 5) {
-      alert("You found a key! This will come in handy later...");
-    } else if (selectedEvent.eventIndex === 6) {
+    if (selectedEvent.eventIndex === 6) {
       alert("You're a real roguish fellow, aren't ye?");
     } else if (selectedEvent.eventIndex === 16.5) {
       alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
-    }
-    if (currentKeyState === true) {
-      alert("true");
     }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
@@ -88,13 +83,21 @@ function start() {
       currentPositiveValue += selectedEvent.positiveValue;
       alert(currentPositiveValue);
     }
-    returnKeyState();
-  }
-  function returnKeyState() {
-    return (
-      selectedEvent.options[1].b.requiredState == null ||
-      selectedEvent.options[1].b.requiredState(keyState)
-    );
+    function keys() {
+      if (selectedEvent.eventIndex === 5) {
+        currentKeyState = Object.assign(currentKeystate, option.keyState);
+      }
+      if (
+        (currentAnswerIndex =
+          37 && selectedEvent.requiredState === currentKeyState.key)
+      ) {
+        DOMSelectors.buttonTwo.style.display = "inline-block";
+      }
+      // else {
+      //   DOMSelectors.buttonTwo.style.display = "none";
+      // }
+    }
+    keys();
   }
 
   DOMSelectors.displayQuiz.addEventListener("click", function (option) {

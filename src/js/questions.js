@@ -407,7 +407,7 @@ const quizGame = [
     question:
       "You punch it, as hard as you can, and fight like your life depends on it! It takes everything you’ve got, what feels like more than you can give, but finally you...lose. The dragon roars ferociously and you are rocketed back, hitting a nearby wall.",
     options: [
-      { a: "What...", answerIndex: "" },
+      { a: "What...", answerIndex: 33 },
       { b: "" },
       { c: "" },
       { d: "" },
@@ -442,7 +442,10 @@ const quizGame = [
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
       { a: "Play again?", answerIndex: -1 },
-      { b: "Use key?", requiredState: (keyState) => keyState.key },
+      {
+        b: "Use key?",
+        requiredState: (currentKeyState) => currentKeyState.key,
+      },
       { c: "" },
       { d: "" },
       // { b: "Use key?", answerIndex: 35 } should have key option here too? also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
@@ -454,7 +457,10 @@ const quizGame = [
       "You pry your eyes open with some effort, and find yourself bloody and tired, slumped on the floor. You move your neck and feel it crack. In fact, all your bones seem to creak at any movement at all. Your parched throat screams for water. You wait. And wait. And wait. And finally, you see a traveler approach. It seems...oh my god, it’s you. It’s you, but without the pain, and without the burden of past choices. You can only hope they make the choices you didn’t.",
     options: [
       { a: "Play again?", answerIndex: -1 },
-      { b: "" },
+      {
+        b: "Use key?",
+        requiredState: (currentKeyState) => currentKeyState.key,
+      },
       { c: "" },
       { d: "" },
       //{ b: "Use key", answerIndex: 35 }
