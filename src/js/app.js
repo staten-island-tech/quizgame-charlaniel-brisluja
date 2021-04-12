@@ -85,9 +85,6 @@ function start() {
     } else if (selectedEvent.eventIndex === 16.5) {
       alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
     }
-    if (currentKeyState === true) {
-      //alert("true");
-    }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;
       return currentNegativeValue;
@@ -96,14 +93,7 @@ function start() {
       currentPositiveValue += selectedEvent.positiveValue;
       return currentPositiveValue;
     }
-    //returnKeyState();
   }
-  /*function returnKeyState() {
-    return (
-      selectedEvent.options[1].b.requiredState == null ||
-      selectedEvent.options[1].b.requiredState(keyState)
-    );
-  }*/
 
   DOMSelectors.displayQuiz.addEventListener("click", function (option) {
     let selectedEvent = quizGame.find(
