@@ -1,10 +1,11 @@
 :root {
   --blue-color: #0069ee;
   --lightblue-color: #59caff;
+  --cyan-color: #7ef6ff;
+  --purple-color: #ff6bdf;
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
-  --pink-color: #ff4d73;
   --main-font: "Underdog", cursive;
 }
 
@@ -48,7 +49,6 @@ body {
   padding: 5rem;
 }
 h1,
-.next,
 .button {
   font-family: var(--main-font);
   letter-spacing: 0.1rem;
@@ -71,66 +71,16 @@ h1 {
   min-height: 9rem;
   border-radius: 3rem;
   border: 0.5rem solid var(--yellow-color);
-  background-color: #0069ee;
+  background-color: var(--blue-color);
   font-size: 2.25rem;
   color: #fff;
   transition: 0.2s all;
 }
 .button:hover {
-  box-shadow: 0 1rem 3rem var(--yellow-color);
+  box-shadow: 0 1rem 3rem var(--lightblue-color);
+  border: 0.5rem solid var(--lightblue-color);
   transform: translateY(-0.5rem);
 }
 .button:focus {
-  border: 0.5rem solid var(--lightblue-color);
-}
-.button:focus:hover {
-  box-shadow: 0 1rem 3rem var(--lightblue-color);
-}
-.button:focus, .next:focus {
   outline: none;
 }
-.next {
-  font-size: 2.25rem;
-  background-color: var(--pink-color);
-  color: var(--white-color);
-  text-decoration: none;
-  border-radius: 3rem;
-  transition: 0.2s all;
-  border: 0.4rem solid var(--white-color);
-  padding: 1.5rem 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  margin-left: 37%;
-  margin-right: 37%;
-  transition: 0.2s all;
-}
-.next:hover {
-  background-color: var(--white-color);
-  color: var(--pink-color);
-  border: 0.4rem solid var(--pink-color);
-  font-weight: 900;
-}
-/*
-form label span {
-  display: block;
-  //box-sizing: border-box;
-  padding: 1.4rem 1.2rem;
-  border: 0.5rem solid var(--yellow-color);
-  cursor: pointer;
-  border-radius: 3rem;
-}
-form label:hover span, form label:focus span {
-  border: 0.5rem solid var(--yellow-color);
-  background-color: var(--blue-color);
-  color: var(--white-color);
-}
-form input[type=radio] {
-  visibility: hidden;
-}
-form input[type=radio]:checked + span {
-  border: 0.5rem solid var(--yellow-color);
-  background-color: var(--blue-color);
-  color: var(--white-color);
-}*/

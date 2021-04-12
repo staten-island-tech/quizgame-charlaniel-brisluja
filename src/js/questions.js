@@ -133,6 +133,7 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
+   // keyState: { key: true },
   },
   {
     eventIndex: 9,
@@ -230,7 +231,8 @@ const quizGame = [
   },
   {
     eventIndex: 15,
-    question: "From afar, you watch the chests. The one in the middle twitches...",
+    question:
+      "From afar, you watch the chests. The one in the middle twitches...",
     options: [
       { a: "Pick chest 1", answerIndex: 17 },
       { b: "Pick chest 2", answerIndex: 18 },
@@ -245,7 +247,17 @@ const quizGame = [
       { a: "Chest 1", answerIndex: 17 },
       { b: "Chest 2", answerIndex: 18 },
       { c: "Chest 3", answerIndex: 19 },
-      { d: "Wisely", answerIndex: 16 },
+      { d: "Wisely", answerIndex: 16.5 },
+    ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
+  },
+  {
+    eventIndex: 16.5,
+    question: "Choose a real option this time!",
+    options: [
+      { a: "Chest 1", answerIndex: 17 },
+      { b: "Chest 2", answerIndex: 18 },
+      { c: "Chest 3", answerIndex: 19 },
+      { d: "" },
     ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
   },
   {
@@ -324,12 +336,45 @@ const quizGame = [
   {
     eventIndex: 20,
     question:
-      "You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”",
+      `You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”`,
     options: [
       { a: "Piano", answerIndex: 25 },
-      { b: "Puzzle", answerIndex: 20 },
-      { c: "Map", answerIndex: 20 },
-      { d: "Chest", answerIndex: 20 }, //idk, I still think we need a text input here,,,and piano music pleaseee
+      { b: "Puzzle", answerIndex: 20.1 },
+      { c: "Map", answerIndex: 20.1 },
+      { d: "Chest", answerIndex: 20.1 }, //idk, I still think we need a text input here,,,and piano music pleaseee
+    ],
+  },
+  {
+    eventIndex: 20.1,
+    question:
+      "So close! What has many keys but can’t open a single lock?",
+    options: [
+      { a: "Piano", answerIndex: 25 },
+      { b: "Puzzle", answerIndex: 20.2 },
+      { c: "Map", answerIndex: 20.2 },
+      { d: "" }, //idk, I still think we need a text input here,,,and piano music pleaseee
+    ],
+  },
+  {
+    eventIndex: 20.2,
+    question:
+    "Almost got it! What has many keys but can’t open a single lock?",
+    options: [
+      { a: "Piano", answerIndex: 25 },
+      { b: "Puzzle", answerIndex: 20.3 },
+      { c: "" },
+      { d: "" }, //idk, I still think we need a text input here,,,and piano music pleaseee
+    ],
+  },
+  {
+    eventIndex: 20.3,
+    question:
+    "You got this! What has many keys but can’t open a single lock?",
+    options: [
+      { a: "Piano", answerIndex: 25 },
+      { b: "" },
+      { c: "" },
+      { d: "" }, //idk, I still think we need a text input here,,,and piano music pleaseee
     ],
   },
   {
@@ -347,7 +392,12 @@ const quizGame = [
     eventIndex: 26,
     question:
       "On the left is a simple podium, holding a crystal. The crystal is heart shaped, floating in midair, radiating warmth and a calm white light.",
-    options: [{ a: "Take it", answerIndex: "" }, {b: ""}, { c: "" }, { d: "" }],
+    options: [
+      { a: "Take it", answerIndex: "" },
+      { b: "" },
+      { c: "" },
+      { d: "" },
+    ],
   },
   {
     eventIndex: 27,
@@ -402,7 +452,7 @@ const quizGame = [
     question:
       "You reach your hand out to the dragon, as if it were a large dog. It regards you for a moment, taking stock of your inventory and soul in ways you would not imagine it capable of. After some time, it lowers its head to let you pet it. It moves away, bringing you back a large and glowing white crystal, shaped like a heart. You feel warmth radiating off of it, as the dragon gives you a knowing smile.", //idk
     options: [
-      { a: "Take it", answerIndex: "" },
+      { a: "Take it", answerIndex: 33 },
       { b: "" },
       { c: "" },
       { d: "" },
@@ -411,7 +461,7 @@ const quizGame = [
   {
     eventIndex: 33,
     question:
-      "You blink, and when you open your eyes, you are back with the statue in the pool of water cave you woke up in. A smile cracks onto her stony face as she gently takes her heart from you. Her eyes are warm and loving, as she reaches out a hand",
+      "You blink, and when you open your eyes, you are back with the statue in the pool of water cave you woke up in. A smile cracks onto her stony face as she gently takes her heart from you. Her eyes are warm and loving, as she reaches out a hand.",
     options: [
       { a: "Take her hand", answerIndex: 34 },
       { b: "" },
@@ -424,12 +474,13 @@ const quizGame = [
     question:
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
-      { a: "Play again?", answerIndex: -1 },
-      { b: "" },
+      { a: "Play again!", answerIndex: -1 },
+      { b: "🗝", answerIndex: -1, /*requiredState: (keyState) => keyState.key*/ },
       { c: "" },
       { d: "" },
       // { b: "Use key?", answerIndex: 35 } should have key option here too? also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
     ],
+    keyState: "",
   },
   {
     eventIndex: 36,
