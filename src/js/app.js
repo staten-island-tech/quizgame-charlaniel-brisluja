@@ -71,6 +71,11 @@ function start() {
       DOMSelectors.buttonBox.style.gridTemplateColumns = "1fr 1fr";
       DOMSelectors.buttonBox.style.padding = "0";
     }
+    if (selectedEvent.hasOwnProperty("keyState")) {
+      DOMSelectors.buttonTwo.style.backgroundColor = "var(--cyan-color)";
+      DOMSelectors.buttonTwo.style.fontSize = "4rem";
+      DOMSelectors.buttonTwo.style.border = "0.5rem solid var(--purple-color)";
+    }
     if (selectedEvent.eventIndex === 5) {
       currentKeyState = true;
       alert("You found a key! This will come in handy later...");
@@ -81,7 +86,7 @@ function start() {
       alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
     }
     if (currentKeyState === true) {
-      alert("true");
+      //alert("true");
     }
     if (selectedEvent.hasOwnProperty("negativeValue")) {
       currentNegativeValue += selectedEvent.negativeValue;

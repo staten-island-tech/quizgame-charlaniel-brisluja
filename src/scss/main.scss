@@ -1,6 +1,8 @@
 :root {
   --blue-color: #0069ee;
   --lightblue-color: #59caff;
+  --cyan-color: #35f2ff;
+  --purple-color: #ec34e0;
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
@@ -69,7 +71,7 @@ h1 {
   min-height: 9rem;
   border-radius: 3rem;
   border: 0.5rem solid var(--yellow-color);
-  background-color: #0069ee;
+  background-color: var(--blue-color);
   font-size: 2.25rem;
   color: #fff;
   transition: 0.2s all;

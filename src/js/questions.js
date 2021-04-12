@@ -336,12 +336,45 @@ const quizGame = [
   {
     eventIndex: 20,
     question:
-      "You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”",
+      `You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”`,
     options: [
       { a: "Piano", answerIndex: 25 },
-      { b: "Puzzle", answerIndex: 20 },
-      { c: "Map", answerIndex: 20 },
-      { d: "Chest", answerIndex: 20 }, //idk, I still think we need a text input here,,,and piano music pleaseee
+      { b: "Puzzle", answerIndex: 20.1 },
+      { c: "Map", answerIndex: 20.1 },
+      { d: "Chest", answerIndex: 20.1 }, //idk, I still think we need a text input here,,,and piano music pleaseee
+    ],
+  },
+  {
+    eventIndex: 20.1,
+    question:
+      "So close! What has many keys but can’t open a single lock?",
+    options: [
+      { a: "Piano", answerIndex: 25 },
+      { b: "Puzzle", answerIndex: 20.2 },
+      { c: "Map", answerIndex: 20.2 },
+      { d: "" }, //idk, I still think we need a text input here,,,and piano music pleaseee
+    ],
+  },
+  {
+    eventIndex: 20.2,
+    question:
+    "Almost got it! What has many keys but can’t open a single lock?",
+    options: [
+      { a: "Piano", answerIndex: 25 },
+      { b: "Puzzle", answerIndex: 20.3 },
+      { c: "" },
+      { d: "" }, //idk, I still think we need a text input here,,,and piano music pleaseee
+    ],
+  },
+  {
+    eventIndex: 20.3,
+    question:
+    "You got this! What has many keys but can’t open a single lock?",
+    options: [
+      { a: "Piano", answerIndex: 25 },
+      { b: "" },
+      { c: "" },
+      { d: "" }, //idk, I still think we need a text input here,,,and piano music pleaseee
     ],
   },
   {
@@ -428,7 +461,7 @@ const quizGame = [
   {
     eventIndex: 33,
     question:
-      "You blink, and when you open your eyes, you are back with the statue in the pool of water cave you woke up in. A smile cracks onto her stony face as she gently takes her heart from you. Her eyes are warm and loving, as she reaches out a hand",
+      "You blink, and when you open your eyes, you are back with the statue in the pool of water cave you woke up in. A smile cracks onto her stony face as she gently takes her heart from you. Her eyes are warm and loving, as she reaches out a hand.",
     options: [
       { a: "Take her hand", answerIndex: 34 },
       { b: "" },
@@ -441,8 +474,8 @@ const quizGame = [
     question:
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
-      { a: "Play again?", answerIndex: -1 },
-      { b: "Use key?", /*requiredState: (keyState) => keyState.key*/ },
+      { a: "Play again!", answerIndex: -1 },
+      { b: "🗝", /*requiredState: (keyState) => keyState.key*/ },
       { c: "" },
       { d: "" },
       // { b: "Use key?", answerIndex: 35 } should have key option here too? also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
