@@ -33,17 +33,13 @@ function start() {
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
   
     if (
-      (selectedEvent.options[1].b === "" &&
-      selectedEvent.options[2].c === "" &&
-      selectedEvent.options[3].d === "") ||
-      (selectedEvent.hasOwnProperty("keyState") && currentKeyState === undefined)) {
+      (selectedEvent.options[1].b === "" && selectedEvent.options[2].c === "" && selectedEvent.options[3].d === "") || (selectedEvent.hasOwnProperty("keyState") && currentKeyState === undefined)) {
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "none";
       DOMSelectors.buttonThree.style.display = "none";
       DOMSelectors.buttonFour.style.display = "none";
     } else if (
-      selectedEvent.options[2].c === "" &&
-      selectedEvent.options[3].d === ""
+      selectedEvent.options[2].c === "" && selectedEvent.options[3].d === ""
     ) {
       DOMSelectors.buttonOne.style.display = "inline-block";
       DOMSelectors.buttonTwo.style.display = "inline-block";
@@ -75,25 +71,39 @@ function start() {
       DOMSelectors.buttonTwo.style.backgroundColor = "var(--cyan-color)";
       DOMSelectors.buttonTwo.style.fontSize = "4rem";
       DOMSelectors.buttonTwo.style.border = "0.5rem solid var(--purple-color)";
-    }
-    if (selectedEvent.eventIndex === 5) {
-      currentKeyState = true;
-      alert("You found a key! This will come in handy later...");
-      return currentKeyState;
-    } else if (selectedEvent.eventIndex === 6) {
-      alert("You're a real roguish fellow, aren't ye?");
-    } else if (selectedEvent.eventIndex === 16.5) {
-      alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
-    }
-    if (selectedEvent.hasOwnProperty("negativeValue")) {
-      currentNegativeValue += selectedEvent.negativeValue;
-      return currentNegativeValue;
-    }
-    if (selectedEvent.hasOwnProperty("positiveValue")) {
-      currentPositiveValue += selectedEvent.positiveValue;
-      return currentPositiveValue;
+    } else {
+      DOMSelectors.buttonTwo.style.backgroundColor = "var(--blue-color)";
+      DOMSelectors.buttonTwo.style.fontSize = "2.25rem";
+      DOMSelectors.buttonTwo.style.border = "0.5rem solid var(--yellow-color)";
     }
   }
+  function alerts () {
+    let selectedEvent = quizGame.find(
+      (event) => event.eventIndex === currentAnswerIndex
+    );
+    if (selectedEvent.eventIndex === 5) {
+    currentKeyState = true;
+    alert("You found a key! This will come in handy later...");
+    return currentKeyState;
+  } else if (selectedEvent.eventIndex === 6) {
+    alert("You're a real roguish fellow, aren't ye?");
+  } else if (selectedEvent.eventIndex === 16.5) {
+    alert("Ha! Choose a real option, wise guy! (see what I did there? hehe)");
+  }
+}
+function moralState () {
+  let selectedEvent = quizGame.find(
+    (event) => event.eventIndex === currentAnswerIndex
+  );
+  if (selectedEvent.hasOwnProperty("negativeValue")) {
+    currentNegativeValue += selectedEvent.negativeValue;
+    return currentNegativeValue;
+  } else if (selectedEvent.hasOwnProperty("positiveValue")) {
+    currentPositiveValue += selectedEvent.positiveValue;
+    return currentPositiveValue;
+  }
+}
+
 
   DOMSelectors.displayQuiz.addEventListener("click", function (option) {
     let selectedEvent = quizGame.find(
@@ -112,7 +122,10 @@ function start() {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
       console.log(currentKeyState);
     }
+    console.log(selectedEvent.hasOwnProperty("keyState"));
     displayEvent();
+    alerts();
+    moralState();
   });
 }
 
