@@ -2,7 +2,7 @@
   --blue-color: #0069ee;
   --lightblue-color: #59caff;
   --cyan-color: #7ef6ff;
-  --purple-color: #ff6bdf;
+  // --purple-color: #ff6bdf;
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
@@ -73,7 +73,7 @@ h1 {
   border: 0.5rem solid var(--yellow-color);
   background-color: var(--blue-color);
   font-size: 2.25rem;
-  color: #fff;
+  color: var(--white-color);
   transition: 0.2s all;
 }
 .button:hover {
@@ -87,8 +87,10 @@ h1 {
 
 @media only screen and (max-width: 768px) {
   html,
-  body, * {
-  font-size: 40%;
+  body,
+  * {
+    font-size: 40%;
+  }
 }
 .container {
   width: 100%;
