@@ -182,8 +182,7 @@ const quizGame = [
   },
   {
     eventIndex: 11,
-    question:
-      "You go over to the person, searching your pockets for bandages as you go. You find some and offer them to the person. They raise their head with effort and offer you a pained smile. 'Ah, you’re just starting', they say. 'Some advice from an experienced traveler? When you get to the fork in the road, go left.",
+    question: `You go over to the person, searching your pockets for bandages as you go. You find some and offer them to the person. They raise their head with effort and offer you a pained smile. "Ah, you’re just starting", they say. "Some advice from an experienced traveler? When you get to the fork in the road, it's easier to go left."`,
     options: [{ a: "Nod", answerIndex: 13 }, { b: "" }, { c: "" }, { d: "" }],
     positiveValue: +1,
   },
