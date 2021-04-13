@@ -1,21 +1,13 @@
 /*Questions Notes:
 
 Positives and Negatives Info:
-There are four positive choices and two negatives for the dragon interaction. 
-IF THE PERSON GOT TWO OUT OF FOUR OF THE POSITIVES, THEY HAVE THE OPPORTUNITY TO BEFRIEND THE DRAGON. IF THE PERSON HAS TWO OF TWO NEGATIVES, THEY MUST FIGHT THE DRAGON.
-POSITIVES = GOT FEMUR BONE FROM CHEST, BEFRIENDED CHESTER, GIVE COIN (it is possible to get two of four if and only if one of the conditions in the chest room is met)
-NEGATIVES = STOLE FROM PERSON AND GOT CRYSTAL, FOUGHT CHESTER 
+There are three positives and three negatives. 
+Positives: Help them, Befriend Chester, Befriend dragon
+Negatives: Loot them, Fight Chester, Fight Dragon
 
 the endings are at: 2(waking up in grassy field), 4(wow you didn't even try),33+34(good),36(bad)
-FOR ENDINGS: THERE ARE FIVE POSITIVES AND THREE NEGATIVES, IF 3/5 POSITIVES ARE MET, GO TO GOOD, IF 2/3 NEGATIVES, GO TO BAD (additional positive/negatives are in the dragon fight, befriend is positive and fight is negative)
+-2 is use key
 
-36 is use key, it's not written yet
-
-ENDINGS AREN'T CONNECTED YET, ANYTHING WITH AN EMPTY anwerIndex IS SUPPOSED TO TAKE YOU TO AN ENDING
-
-We have to figure out the door room, if they already tried one of the options it shouldn't show up for them again. 
-
-The piano options show up vertically instead of in a grid for reasons I don't understand,,,maybe cause 3/4 of them have an answerIndex equal to the eventIndex of that page??
 */
 
 const quizGame = [
@@ -60,7 +52,7 @@ const quizGame = [
     question: `"I need you to find my heart deep within this cave. I can give you paradise in return...you are the only one capable of this task. Do you accept?"`,
     options: [
       {
-        a: "Accept", //goes to eventTwo
+        a: "Accept",
         answerIndex: 3,
       },
       {
@@ -99,7 +91,7 @@ const quizGame = [
     question: "Wow, you didn't even try!",
     options: [
       {
-        a: "Play again?",
+        a: "Play again? (for real this time)",
         answerIndex: -1,
       },
       {
@@ -133,7 +125,6 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
-   // keyState: { key: true },
   },
   {
     eventIndex: 9,
@@ -248,7 +239,7 @@ const quizGame = [
       { b: "Chest 2", answerIndex: 18 },
       { c: "Chest 3", answerIndex: 19 },
       { d: "Wisely", answerIndex: 16.5 },
-    ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
+    ],
   },
   {
     eventIndex: 16.5,
@@ -258,7 +249,7 @@ const quizGame = [
       { b: "Chest 2", answerIndex: 18 },
       { c: "Chest 3", answerIndex: 19 },
       { d: "" },
-    ], //there should be an alert or smthn here like "haha funny man, pick a real option" or some nonsense
+    ],
   },
   {
     eventIndex: 17,
@@ -335,8 +326,7 @@ const quizGame = [
   },
   {
     eventIndex: 20,
-    question:
-      `You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”`,
+    question: `You go through the doorway and feel a rush of unease. A booming voice coming from everywhere at once says “What has many keys but can’t open a single lock?”`,
     options: [
       { a: "Piano", answerIndex: 25 },
       { b: "Puzzle", answerIndex: 20.1 },
@@ -346,8 +336,7 @@ const quizGame = [
   },
   {
     eventIndex: 20.1,
-    question:
-      "So close! What has many keys but can’t open a single lock?",
+    question: "So close! What has many keys but can’t open a single lock?",
     options: [
       { a: "Piano", answerIndex: 25 },
       { b: "Puzzle", answerIndex: 20.2 },
@@ -357,8 +346,7 @@ const quizGame = [
   },
   {
     eventIndex: 20.2,
-    question:
-    "Almost got it! What has many keys but can’t open a single lock?",
+    question: "Almost got it! What has many keys but can’t open a single lock?",
     options: [
       { a: "Piano", answerIndex: 25 },
       { b: "Puzzle", answerIndex: 20.3 },
@@ -368,8 +356,7 @@ const quizGame = [
   },
   {
     eventIndex: 20.3,
-    question:
-    "You got this! What has many keys but can’t open a single lock?",
+    question: "Wow...well then...",
     options: [
       { a: "Piano", answerIndex: 25 },
       { b: "" },
@@ -392,12 +379,7 @@ const quizGame = [
     eventIndex: 26,
     question:
       "On the left is a simple podium, holding a crystal. The crystal is heart shaped, floating in midair, radiating warmth and a calm white light.",
-    options: [
-      { a: "Take it", answerIndex: "" },
-      { b: "" },
-      { c: "" },
-      { d: "" },
-    ],
+    options: [{ a: "Take it" }, { b: "" }, { c: "" }, { d: "" }],
   },
   {
     eventIndex: 27,
@@ -409,10 +391,9 @@ const quizGame = [
       { c: "" },
       { d: "" },
     ],
-    //if a -1 negativeValue, if b +1 positive, it should be here b/c it has to be recorded before the next screen
   },
   {
-    eventIndex: 29, //positives and negatives,,,,idk
+    eventIndex: 29,
     question:
       "You pick up a large golden coin from the pile. Surely no one will miss this, seeing as there’s so much else here. The ground rumbles as a massive dragon with wiry bat wings bursts through the pile of riches!! It’s eyes are as tall as you are, and its fetid breath washes over you.",
     options: [
@@ -439,24 +420,13 @@ const quizGame = [
     eventIndex: 31,
     question:
       "You punch it, as hard as you can, and fight like your life depends on it! It takes everything you’ve got, what feels like more than you can give, but finally you...lose. The dragon roars ferociously and you are rocketed back, hitting a nearby wall.",
-    options: [
-      { a: "What...", answerIndex: "" },
-      { b: "" },
-      { c: "" },
-      { d: "" },
-    ],
-    negativeValue: -1,
-  }, //check if good or if bad...we'll figure it out, I'm too tired rn
+    options: [{ a: "What..." }, { b: "" }, { c: "" }, { d: "" }],
+  },
   {
     eventIndex: 32,
     question:
       "You reach your hand out to the dragon, as if it were a large dog. It regards you for a moment, taking stock of your inventory and soul in ways you would not imagine it capable of. After some time, it lowers its head to let you pet it. It moves away, bringing you back a large and glowing white crystal, shaped like a heart. You feel warmth radiating off of it, as the dragon gives you a knowing smile.", //idk
-    options: [
-      { a: "Take it", answerIndex: 33 },
-      { b: "" },
-      { c: "" },
-      { d: "" },
-    ],
+    options: [{ a: "Take it" }, { b: "" }, { c: "" }, { d: "" }],
   },
   {
     eventIndex: 33,
@@ -475,10 +445,10 @@ const quizGame = [
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
       { a: "Play again!", answerIndex: -1 },
-      { b: "🗝", answerIndex: -1, /*requiredState: (keyState) => keyState.key*/ },
+      { b: "🗝", answerIndex: -2 },
       { c: "" },
       { d: "" },
-      // { b: "Use key?", answerIndex: 35 } should have key option here too? also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
+      // also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
     ],
     keyState: "",
   },
@@ -488,12 +458,34 @@ const quizGame = [
       "You pry your eyes open with some effort, and find yourself bloody and tired, slumped on the floor. You move your neck and feel it crack. In fact, all your bones seem to creak at any movement at all. Your parched throat screams for water. You wait. And wait. And wait. And finally, you see a traveler approach. It seems...oh my god, it’s you. It’s you, but without the pain, and without the burden of past choices. You can only hope they make the choices you didn’t.",
     options: [
       { a: "Play again?", answerIndex: -1 },
+      { b: "🗝", answerIndex: -2 },
+      { c: "" },
+      { d: "" },
+    ],
+    keyState: "",
+  }, //some kind of alert: "Congratulations! You were subjected to eternal torment!"
+  {
+    eventIndex: 37,
+    question: "Neutral",
+    options: [
+      { a: "Play again?", answerIndex: -1 },
+      { b: "🗝", answerIndex: -2 },
+      { c: "" },
+      { d: "" },
+    ],
+    keyState: "",
+  },
+  {
+    eventIndex: -2,
+    question:
+      "Enjoy these pictures of our dogs, JoJo and Kacey!! Follow JoJo on instagram @jojos_bizarre_puppy_adventures!!",
+    options: [
+      { a: "Play again?", answerIndex: -1 },
       { b: "" },
       { c: "" },
       { d: "" },
-      //{ b: "Use key", answerIndex: 35 }
     ],
-  }, //some kind of alert: "Congratulations! You were subjected to eternal torment!"
+  },
 ];
 
 export { quizGame };
