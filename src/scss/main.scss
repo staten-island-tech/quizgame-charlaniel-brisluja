@@ -127,7 +127,13 @@ h1 {
 .button:focus {
   outline: none;
 }
-
+@media only screen and (max-width: 1200px) {
+  .button:hover {
+    box-shadow: none;
+    border: 0.5rem solid var(--yellow-color);
+    transform: none;
+  }
+}
 @media only screen and (max-width: 768px) {
   html,
   body,
@@ -136,11 +142,6 @@ h1 {
   }
 .container {
   width: 100%;
-}
-.button:hover {
-  box-shadow: none;
-  border: 0.5rem solid var(--yellow-color);
-  transform: none;
 }
 .img-box {
   height: 40%;
