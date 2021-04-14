@@ -10,10 +10,12 @@ function start() {
   window.onload = displayEvent;
 
   function displayEvent() {
-  //finds event with an eventIndex that matches the currentAnswerIndex that was updated in the
+  //finds event with an eventIndex that matches the currentAnswerIndex
+  //if this function is run inside the click function, the selectedEvent matches the currentAnswerIndex that was updated in the click function
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
     );
+  //injects text from selectedEvent into displayed event
     DOMSelectors.question.innerHTML = selectedEvent.question;
     DOMSelectors.buttonOne.innerHTML = selectedEvent.options[0].a;
     DOMSelectors.buttonTwo.innerHTML = selectedEvent.options[1].b;
@@ -129,7 +131,8 @@ function start() {
     }
   }
 
-  DOMSelectors.displayQuiz.addEventListener("click", function optionClick(option) {
+  DOMSelectors.displayQuiz.addEventListener("click", function click(option) {
+    
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
     ); //same as above! shoutout to us for making our entire game work by putting this goblin in every function
