@@ -2,7 +2,7 @@
   --blue-color: #0069ee;
   --lightblue-color: #59caff;
   --cyan-color: #7ef6ff;
-  // --purple-color: #ff6bdf;
+   --purple-color: #ff6bdf;
   --yellow-color: #f6f285;
   --white-color: #fff;
   --red-color: rgba(204, 106, 54, 0.7);
@@ -57,6 +57,27 @@ h1 {
   font-size: 2.5rem;
   text-align: left;
   line-height: 150%;
+}
+.img-box {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 3rem var(--purple-color);
+  width: 100%;
+  height: 70%;
+  margin-top: 4rem;
+  display: none;
+}
+.kacey-img, .jojo-img {
+  width: 50%;
+  height: 100%;
+  display: none;
+}
+.kacey-img {
+  border-radius: 2rem 0 0 2rem;
+}
+.jojo-img {
+  border-radius: 0 2rem 2rem 0;
 }
 .button-box {
   display: grid;

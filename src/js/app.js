@@ -19,6 +19,15 @@ function start() {
     DOMSelectors.buttonThree.innerHTML = selectedEvent.options[2].c;
     DOMSelectors.buttonFour.innerHTML = selectedEvent.options[3].d;
 
+    if (selectedEvent.eventIndex === -2) {
+      DOMSelectors.imgBox.style.display = "flex";
+      DOMSelectors.kaceyImg.style.display = "inline-block";
+      DOMSelectors.jojoImg.style.display = "inline-block";
+    } else {
+      DOMSelectors.imgBox.style.display = "none";
+      DOMSelectors.kaceyImg.style.display = "none";
+      DOMSelectors.jojoImg.style.display = "none";
+    }
     if (
       (selectedEvent.options[1].b === "" &&
         selectedEvent.options[2].c === "" &&
@@ -120,32 +129,27 @@ function start() {
   DOMSelectors.displayQuiz.addEventListener("click", function (option) {
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
-    ); //same as above! shoutout to us for making our entire game work by putting this goblin in both functions
+    ); //same as above! shoutout to us for making our entire game work by putting this goblin in every function
 
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      console.log(currentPositiveValue + currentNegativeValue);
+      //console.log(currentPositiveValue + currentNegativeValue);
+      console.log(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      console.log(currentPositiveValue + currentNegativeValue);
+      //console.log(currentPositiveValue + currentNegativeValue);
+      console.log(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      console.log(currentPositiveValue + currentNegativeValue);
+      //console.log(currentPositiveValue + currentNegativeValue);
     } else if (option.target === DOMSelectors.buttonFour) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      console.log(currentPositiveValue + currentNegativeValue);
+      //console.log(currentPositiveValue + currentNegativeValue);
     }
     console.log(selectedEvent.hasOwnProperty("keyState"));
     displayEvent();
     alerts();
     moralState();
-
-    if (selectedEvent.eventIndex === 40) {
-      const img = document.createElement("img");
-      img.src = "../img/dog3.jpg";
-      img.height = "300";
-      DOMSelectors.displayContainer.appendChild(img);
-    }
   });
 }
 

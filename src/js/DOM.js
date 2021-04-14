@@ -1,6 +1,9 @@
 const DOMSelectors = {
   displayContainer: document.querySelector(".container"),
   displayQuiz: document.querySelector("#quiz"),
+  imgBox: document.querySelector(".img-box"),
+  kaceyImg: document.querySelector(".kacey-img"),
+  jojoImg: document.querySelector(".jojo-img"),
   question: document.querySelector("#text"),
   optionButtons: document.querySelectorAll("#button-options"),
   buttonBox: document.querySelector(".button-box"),
