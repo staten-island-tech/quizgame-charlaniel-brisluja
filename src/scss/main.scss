@@ -115,4 +115,12 @@ h1 {
 .container {
   width: 100%;
 }
+.button:hover {
+  box-shadow: none;
+  border: 0.5rem solid var(--yellow-color);
+  transform: none;
+}
+.img-box {
+  height: 40%;
+}
 }
