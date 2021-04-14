@@ -67,6 +67,28 @@ h1 {
   height: 70%;
   margin-top: 4rem;
   display: none;
+  transition: .5s all;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
+  }
+
+  80% {
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+  }
+}
+.img-box:hover {
+  animation-name: bounce;
 }
 .kacey-img, .jojo-img {
   width: 50%;
