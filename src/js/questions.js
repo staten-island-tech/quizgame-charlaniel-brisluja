@@ -6,7 +6,7 @@ Positives: Help them, Befriend Chester, Befriend dragon
 Negatives: Loot them, Fight Chester, Fight Dragon
 
 the endings are at: 2(waking up in grassy field), 4(wow you didn't even try),33+34(good),36(bad)
--2 is use key
+40 is use key
 
 */
 
@@ -444,7 +444,7 @@ const quizGame = [
       "You take her hand and wake up in a grassy field. The sun beats down on you, and your family is waiting. You close your laptop and sit up as your favorite pet rushes to greet you. All is right in the world.",
     options: [
       { a: "Play again!", answerIndex: -1 },
-      { b: "🗝", answerIndex: -2 },
+      { b: "🗝", answerIndex: 40 },
       { c: "" },
       { d: "" },
       // also some sort of alert like "Congratulations! You have achieved contentment. I’m happy for you!"
@@ -457,7 +457,7 @@ const quizGame = [
       "You pry your eyes open with some effort, and find yourself bloody and tired, slumped on the floor. You move your neck and feel it crack. In fact, all your bones seem to creak at any movement at all. Your parched throat screams for water. You wait. And wait. And wait. And finally, you see a traveler approach. It seems...oh my god, it’s you. It’s you, but without the pain, and without the burden of past choices. You can only hope they make the choices you didn’t.",
     options: [
       { a: "Play again?", answerIndex: -1 },
-      { b: "🗝", answerIndex: -2 },
+      { b: "🗝", answerIndex: 40 },
       { c: "" },
       { d: "" },
     ],
@@ -468,14 +468,14 @@ const quizGame = [
     question: "Neutral",
     options: [
       { a: "Play again?", answerIndex: -1 },
-      { b: "🗝", answerIndex: -2 },
+      { b: "🗝", answerIndex: 40 },
       { c: "" },
       { d: "" },
     ],
     keyState: "",
   },
   {
-    eventIndex: -2,
+    eventIndex: 40,
     question:
       "Enjoy these pictures of our dogs, JoJo and Kacey!! Follow JoJo on instagram @jojos_bizarre_puppy_adventures!!",
     options: [

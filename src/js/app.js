@@ -139,6 +139,13 @@ function start() {
     displayEvent();
     alerts();
     moralState();
+
+    if (selectedEvent.eventIndex === 40) {
+      const img = document.createElement("img");
+      img.src = "../img/dog3.jpg";
+      img.height = "300";
+      DOMSelectors.displayContainer.appendChild(img);
+    }
   });
 }
 
