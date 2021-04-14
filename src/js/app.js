@@ -10,6 +10,7 @@ function start() {
   window.onload = displayEvent;
 
   function displayEvent() {
+  //finds event with an eventIndex that matches the currentAnswerIndex that was updated in the
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
     );
@@ -28,6 +29,8 @@ function start() {
       DOMSelectors.kaceyImg.style.display = "none";
       DOMSelectors.jojoImg.style.display = "none";
     }
+    //if currentKeyState is true, the easter egg (in the second button) shows up
+    //otherwise the second button doesn't show up, and the user cannot access the easter egg event (-2)
     if (
       (selectedEvent.options[1].b === "" &&
         selectedEvent.options[2].c === "" &&
@@ -126,27 +129,24 @@ function start() {
     }
   }
 
-  DOMSelectors.displayQuiz.addEventListener("click", function (option) {
+  DOMSelectors.displayQuiz.addEventListener("click", function optionClick(option) {
     let selectedEvent = quizGame.find(
       (event) => event.eventIndex === currentAnswerIndex
     ); //same as above! shoutout to us for making our entire game work by putting this goblin in every function
 
+    //these update the currentAnswerIndex on the click of the option buttons (shoutout to event delegation!!)
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      //console.log(currentPositiveValue + currentNegativeValue);
       console.log(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      //console.log(currentPositiveValue + currentNegativeValue);
       console.log(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
-      //console.log(currentPositiveValue + currentNegativeValue);
     } else if (option.target === DOMSelectors.buttonFour) {
       currentAnswerIndex = selectedEvent.options[3].answerIndex;
-      //console.log(currentPositiveValue + currentNegativeValue);
     }
-    console.log(selectedEvent.hasOwnProperty("keyState"));
+    //when displayEvent runs, it finds the new selectedEvent based on the currentAnswerIndex
     displayEvent();
     alerts();
     moralState();
