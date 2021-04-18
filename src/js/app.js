@@ -129,6 +129,11 @@ function start() {
     ) {
       selectedEvent.options[0].answerIndex = 36;
     }
+    if (selectedEvent.eventIndex === -1) {
+      currentPositiveValue = 0;
+      currentNegativeValue = 0;
+      currentKeyState = 0;
+    }
   }
 
   DOMSelectors.displayQuiz.addEventListener("click", function click(option) {
@@ -140,10 +145,8 @@ function start() {
     //these update the currentAnswerIndex on the click of the option buttons (shoutout to event delegation!!)
     if (option.target === DOMSelectors.buttonOne) {
       currentAnswerIndex = selectedEvent.options[0].answerIndex;
-      console.log(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonTwo) {
       currentAnswerIndex = selectedEvent.options[1].answerIndex;
-      console.log(currentAnswerIndex);
     } else if (option.target === DOMSelectors.buttonThree) {
       currentAnswerIndex = selectedEvent.options[2].answerIndex;
     } else if (option.target === DOMSelectors.buttonFour) {
