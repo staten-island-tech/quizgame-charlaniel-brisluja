@@ -132,7 +132,7 @@ function start() {
     if (selectedEvent.eventIndex === -1) {
       currentPositiveValue = 0;
       currentNegativeValue = 0;
-      currentKeyState = 0;
+      currentKeyState = undefined;
     }
   }
 
