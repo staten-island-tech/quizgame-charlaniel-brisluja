@@ -7,7 +7,7 @@ function start() {
   let currentPositiveValue = 0;
   let currentNegativeValue = 0;
 
-  window.onload = displayEvent;
+  displayEvent();
 
   function displayEvent() {
   //finds event with an eventIndex that matches the currentAnswerIndex
